@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  font-family: "Sen", sans-serif;
+}
+
+body {
+  background-color: #E5E5E5;
+  color: #545F7D;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 1.5rem 2rem;
+}/*# sourceMappingURL=main.css.map */

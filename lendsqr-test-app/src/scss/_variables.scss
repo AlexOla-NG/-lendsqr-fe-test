@@ -1,0 +1,39 @@
+// STUB: font
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+// STUB: colors
+$primary-color: #213F7D;
+$secondary-color: #E5E5E5;
+$accent-color: #39CDCC;
+$text-color: #545F7D;
+$danger-color: #E4033B;
+$active-color: #39CD62;
+$pending-color: #E9B200;
+$white-color: #FFFFFF;
+$black-color: #000000;
+
+// STUB: border radius
+$border-radii: (
+  'small': 1px,
+  'regular': 2px,
+  'large': 100px,
+);
+
+// STUB: font size
+$font-sizes: (
+  'fs-h1': 2.5rem,
+  'fs-h2': 1.5rem,
+  'fs-p': 1rem,
+  'fs-body1': 0.875rem,
+  'fs-body2': 0.75rem,
+  'fs-caption': 0.7rem,
+);
+
+// STUB: font weight
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'medium-x': 600,
+  'bold': 700,
+);
