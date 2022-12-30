@@ -1,50 +1,18 @@
 @include media-md {
-  form {
-    label {
-      width: 50%
-    }
-  }
-
-  footer {
-    position: fixed;
-    left: 2rem;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-
-    hr {
-      width: 92%;
+  .login {
+    &-hero {
+      .logo {
+        svg {
+          width: 174px;
+          height: 36px;
+        }
+      }
     }
   }
 }
 
-@include media-lg {
+@include media-lg {}
 
-  form {
-    label {
-      width: 20%
-    }
-  }
+@include media-xl {}
 
-  footer {
-    hr {
-      width: 94%;
-    }
-  }
-}
-
-@include media-xl {
-  footer {
-    hr {
-      width: 96%;
-    }
-  }
-}
-
-@include media-xxl {
-  footer {
-    hr {
-      width: 98%;
-    }
-  }
-}
+@include media-xxl {}

@@ -29,6 +29,11 @@
   justify-content: space-between;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 // STUB: create media-query mixin
 @mixin media-md {
   @media screen and (min-width: 768px) {

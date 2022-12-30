@@ -1,3 +1,94 @@
 .login {
   font-family: 'Sen', sans-serif;
+
+  &-hero {
+    @include flex-column;
+    gap: 5rem;
+    height: 100vh;
+    padding: 2rem 0;
+
+    .logo {
+      svg {
+        width: 82px;
+        height: 36px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &-form {
+    height: 100vh;
+
+    .form-wrapper {
+      @include flex-column;
+      gap: 2.5rem;
+
+      .title-wrapper {
+        h1 {
+          color: $primary-color;
+          font-size: size(fs-h1);
+          font-weight: weight(x-bold);
+        }
+
+        h2 {
+          font-size: size(fs-h2);
+          font-weight: weight(regular);
+        }
+      }
+
+      form {
+        @include flex-column;
+        gap: 1.5rem;
+
+        input,
+        button {
+          background: $white-color;
+          border: 0px;
+          font-family: 'Sen', sans-serif;
+          font-size: size(fs-p);
+          font-weight: weight(regular);
+          outline: none;
+        }
+
+        .btn {
+          text-transform: uppercase;
+        }
+
+        .text-btn {
+          color: $accent-color
+        }
+
+        .form-content {
+          @include flex-column;
+          gap: 1rem;
+        }
+
+        .input-wrapper {
+          border: 2px solid rgba(84, 95, 125, 0.15);
+          border-radius: radius(x-regular);
+          padding: 0.75rem 1rem;
+        }
+
+        .password {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .form-content>.btn {
+          display: flex;
+        }
+      }
+
+      form>.btn {
+        background-color: $accent-color;
+        color: $white-color;
+        padding: 0.75rem 1rem;
+        border-radius: radius(xx-regular);
+      }
+
+    }
+  }
 }

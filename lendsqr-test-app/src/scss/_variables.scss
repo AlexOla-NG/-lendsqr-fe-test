@@ -17,13 +17,15 @@ $black-color: #000000;
 $border-radii: (
   'small': 1px,
   'regular': 2px,
+  'x-regular': 5px,
+  'xx-regular': 8px,
   'large': 100px,
 );
 
 // STUB: font size
 $font-sizes: (
   'fs-h1': 2.5rem,
-  'fs-h2': 1.5rem,
+  'fs-h2': 1.25rem,
   'fs-p': 1rem,
   'fs-body1': 0.875rem,
   'fs-body2': 0.75rem,
@@ -34,6 +36,6 @@ $font-sizes: (
 $font-weights: (
   'regular': 400,
   'medium': 500,
-  'medium-x': 600,
-  'bold': 700,
+  'bold': 600,
+  'x-bold': 700,
 );
