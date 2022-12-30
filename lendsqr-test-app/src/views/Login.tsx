@@ -1,13 +1,13 @@
 import React from "react";
+import { IUserAuth } from "../components/form/interface";
 import LoginForm from "../components/form/LoginForm";
 import { ReactComponent as Logo } from "../assets/images/logo.svg";
 import hero from "../assets/images/hero.svg";
 
 // TODO: stopped here
-// style login page
-// create form component; do we need form validation?
+// we need form validation; login btn goes straight to next page
 
-const login = () => {
+const login = ({ userAuth }: IUserAuth) => {
   return (
     <section className="login">
       <div className="login-hero">
@@ -19,7 +19,7 @@ const login = () => {
         </div>
       </div>
       <div className="login-form">
-        <LoginForm />
+        <LoginForm userAuth={userAuth} />
       </div>
     </section>
   );

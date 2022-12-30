@@ -15,12 +15,12 @@ function App() {
 
   // STUB: create function to save auth token to localStorage
   const saveToLocalStorage = () => {
-    localStorage.setItem("auth_token", JSON.stringify(auth));
+    localStorage.setItem("auth_token", JSON.stringify(true));
   };
   return (
     <>
       <Routes>
-        <Route path="login" element={<Login />} />
+        <Route path="login" element={<Login userAuth={saveToLocalStorage} />} />
         <Route
           path="/"
           element={

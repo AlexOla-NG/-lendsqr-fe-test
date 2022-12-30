@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { IUserAuth } from "./interface";
 
-// TODO: stopped here
-// finish styling form
-// add logic to form component
+const LoginForm = ({ userAuth }: IUserAuth) => {
+  const intialValues = {
+    email: "",
+    password: "",
+  };
 
-const LoginForm = () => {
+  const [values, setValues] = useState(intialValues);
+  const [showPassword, setShowPassword] = useState<Boolean>(false);
+  const navigate = useNavigate();
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setValues((prevVal) => {
+      return { ...prevVal, [name]: value };
+    });
+  };
+
+  const handleToggle = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    setShowPassword(!showPassword);
+  };
+
+  const handleForgotPassword = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    userAuth();
+    navigate("/users");
+  };
+
   return (
     <div className="form-wrapper">
       <div className="title-wrapper">
@@ -17,7 +46,8 @@ const LoginForm = () => {
           <div className="input-wrapper">
             <input
               type="email"
-              value=""
+              value={values.email}
+              onChange={handleChange}
               name="email"
               placeholder="Email"
               required
@@ -25,17 +55,24 @@ const LoginForm = () => {
           </div>
           <div className="input-wrapper password">
             <input
-              type="password"
-              value=""
-              name="email"
+              type={showPassword ? "text" : "password"}
+              value={values.password}
+              onChange={handleChange}
+              name="password"
               placeholder="Password"
               required
             />
-            <button className="btn text-btn">show</button>
+            <button className="btn text-btn" onClick={handleToggle}>
+              {showPassword ? "hide" : "show"}
+            </button>
           </div>
-          <button className="btn text-btn">forgot password</button>
+          <button className="btn text-btn" onClick={handleForgotPassword}>
+            forgot password
+          </button>
         </div>
-        <button className="btn">login</button>
+        <button className="btn" onClick={handleSubmit}>
+          login
+        </button>
       </form>
     </div>
   );

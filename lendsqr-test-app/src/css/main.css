@@ -17,6 +17,7 @@
   gap: 5rem;
   height: 100vh;
   padding: 2rem 0;
+  position: relative;
 }
 .login-hero .logo svg {
   width: 82px;
@@ -26,12 +27,18 @@
   max-width: 100%;
 }
 .login-form {
+  box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
   height: 100vh;
 }
 .login-form .form-wrapper {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+.login-form .form-wrapper .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .login-form .form-wrapper .title-wrapper h1 {
   color: #213F7D;
@@ -87,9 +94,45 @@
 }
 
 @media screen and (min-width: 768px) {
+  .login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+    height: 100vh;
+  }
+  .login-hero {
+    justify-content: center;
+  }
+  .login-hero .logo {
+    position: absolute;
+    top: 10%;
+  }
   .login-hero .logo svg {
     width: 174px;
     height: 36px;
+  }
+  .login-form {
+    box-shadow: 0px 16px 90px rgba(0, 0, 0, 0.03);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  .login-form .form-wrapper {
+    grid-column: 2/-2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .login {
+    padding: 2rem 2.5rem;
+  }
+  .login-form .form-wrapper {
+    grid-column: 3/-4;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .login-hero .logo {
+    top: 25%;
   }
 }
 body {
@@ -99,4 +142,8 @@ body {
   font-size: 16px;
   font-weight: 400;
   padding: 1rem 1.5rem;
+}
+
+.btn {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
