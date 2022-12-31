@@ -101,7 +101,7 @@ I also need more practice with JS hoisting and closures. I think there are certa
 
 ### Useful resources
 
-- [How to Create a Toggle Menu | resource 1](https://www.youtube.com/watch?v=yytscwxx1pk) - This helped me understand how hoisting affected the hamburger menu. I really liked this pattern and will use it going forward.
+- [Simple Search Bar by Emily Huang](https://codepen.io/huange/pen/bGqMqM?editors=1100) - This helped me quickly build the searchbar.
 - [Hoisting in JavaScript Explained | resource 2](https://www.youtube.com/watch?v=ppMlvGMT2qE) - This helped me understand how hoisting works in JavaScript.
 - [Hoisting | resource 3](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) - This is the mdn documentation for how hoisting works in JavaScript.
 - [Grid auto-flow resource 1](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout) - This helped me flow grid items by column, rather than the defailt row. I really liked this pattern and will use it going forward.

@@ -79,7 +79,10 @@
 
         .password {
           display: flex;
-          justify-content: space-between;
+        }
+
+        input {
+          width: 100%;
         }
 
         .form-content>.btn {

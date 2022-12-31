@@ -1,4 +1,4 @@
-@import 'resets', 'variables', 'config', 'login', 'responsiveness';
+@import 'resets', 'variables', 'config', 'login', 'navbar', 'responsiveness';
 
 body {
   background-color: $white-color;
@@ -9,6 +9,20 @@ body {
   padding: 1rem 1.5rem;
 }
 
+input,
+button {
+  background: $white-color;
+  border: 0px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: size(fs-p);
+  font-weight: weight(regular);
+  outline: none;
+}
+
 .btn {
   cursor: pointer;
+}
+
+.input-wrapper {
+  border: 2px solid rgba(84, 95, 125, 0.15);
 }

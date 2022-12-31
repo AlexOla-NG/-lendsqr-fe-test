@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../navigation/Navbar";
-import Sidebar from "../navigation/Sidebar";
+import Navbar from "./navigation/Navbar";
+import Sidebar from "./navigation/Sidebar";
 
 // TODO: stopped here
 // create navbar & sidebar components
@@ -9,8 +9,8 @@ import Sidebar from "../navigation/Sidebar";
 const Home = () => {
   return (
     <>
-      Home
       <Navbar />
+      Home
       <Sidebar />
       <Outlet />
     </>

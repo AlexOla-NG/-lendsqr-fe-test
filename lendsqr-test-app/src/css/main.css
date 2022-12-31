@@ -81,7 +81,9 @@
 }
 .login-form .form-wrapper form .password {
   display: flex;
-  justify-content: space-between;
+}
+.login-form .form-wrapper form input {
+  width: 100%;
 }
 .login-form .form-wrapper form .form-content > .btn {
   display: flex;
@@ -91,6 +93,29 @@
   color: #FFFFFF;
   padding: 0.75rem 1rem;
   border-radius: 8px;
+}
+
+.navbar {
+  background-color: #FFFFFF;
+}
+.navbar nav .searchbar {
+  border: 1px solid rgba(84, 95, 125, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.navbar nav .searchbar-term {
+  width: 100%;
+  border-right: none;
+  padding: 0.75rem 1rem;
+  height: 2.5rem;
+}
+.navbar nav .searchbar-button {
+  width: 3rem;
+  height: 2.5rem;
+  background: #39CDCC;
+  text-align: center;
+  border-radius: 0 8px 8px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -123,6 +148,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
   .login {
     padding: 2rem 2.5rem;
   }
@@ -144,6 +172,20 @@ body {
   padding: 1rem 1.5rem;
 }
 
+input,
+button {
+  background: #FFFFFF;
+  border: 0px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+}
+
 .btn {
   cursor: pointer;
+}
+
+.input-wrapper {
+  border: 2px solid rgba(84, 95, 125, 0.15);
 }/*# sourceMappingURL=main.css.map */

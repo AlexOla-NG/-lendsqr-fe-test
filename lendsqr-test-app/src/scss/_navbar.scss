@@ -1,0 +1,28 @@
+.navbar {
+  background-color: $white-color;
+
+  nav {
+    .searchbar {
+      border: 1px solid rgba(84, 95, 125, 0.15);
+      border-radius: radius(xx-regular);
+      display: flex;
+      align-items: center;
+
+      &-term {
+        width: 100%;
+        border-right: none;
+        padding: 0.75rem 1rem;
+        height: 2.5rem;
+      }
+
+      &-button {
+        width: 3rem;
+        height: 2.5rem;
+        background: $accent-color;
+        text-align: center;
+        border-radius: 0 8px 8px 0;
+      }
+    }
+
+  }
+}
