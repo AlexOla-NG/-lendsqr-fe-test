@@ -95,8 +95,13 @@
   border-radius: 8px;
 }
 
+.home {
+  position: relative;
+}
+
 .navbar {
   background-color: #FFFFFF;
+  box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.0392156863);
 }
 .navbar nav {
   display: flex;
@@ -108,7 +113,7 @@
   align-items: center;
 }
 .navbar nav .logo-wrapper {
-  gap: 15rem;
+  gap: 1rem;
 }
 .navbar nav .logo-wrapper .searchbar {
   border: 1px solid rgba(84, 95, 125, 0.15);
@@ -147,15 +152,57 @@
   border-radius: 50%;
 }
 
+.sidebar {
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.0392156863);
+  position: absolute;
+  width: 17.688rem;
+}
+.sidebar-nav {
+  padding: 2rem 0;
+}
 .sidebar-nav .menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 .sidebar-nav .menu-list .menu-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.75rem 0;
+}
+.sidebar-nav .menu-list .menu-item p {
+  text-transform: capitalize;
+}
+.sidebar-nav .menu-list-section {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-nav .menu-list-section .menu-item {
+  padding: 0.75rem 1rem;
+}
+.sidebar-nav .menu-list-section .menu-item:hover {
+  background-color: hsla(180deg, 60%, 51%, 0.06);
+  border-left: 3px solid #39CDCC;
+}
+.sidebar-nav .menu-list-section .menu-item:focus {
+  background-color: hsla(180deg, 60%, 51%, 0.06);
+  border-left: 3px solid #39CDCC;
+}
+.sidebar-nav .menu-list .btn {
+  color: #213F7D;
+}
+.sidebar-nav .menu-list h3 {
+  font-size: 0.75rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+.sidebar-nav .menu-list > * {
+  grid-column: 2/-1;
+}
+
+.screensaver {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -191,8 +238,11 @@
   .navbar {
     padding: 1.5rem;
   }
-  .sidebar {
-    padding: 0 1.5rem;
+  .navbar nav .logo-wrapper {
+    gap: 15rem;
+  }
+  .screensaver {
+    display: block;
   }
   .login {
     padding: 2rem 2.5rem;
@@ -212,7 +262,6 @@ body {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  padding: 1rem 1.5rem;
 }
 
 input,

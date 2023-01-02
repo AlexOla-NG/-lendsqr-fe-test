@@ -37,11 +37,24 @@
 
   .navbar {
     padding: 1.5rem;
+
+    nav {
+      .logo-wrapper {
+        gap: 15rem;
+      }
+    }
   }
 
   .sidebar {
-    padding: 0 1.5rem;
+    // padding: 0 1.5rem;
   }
+
+  .screensaver {
+    display: block;
+
+  }
+
+
 
   .login {
     padding: 2rem 2.5rem;

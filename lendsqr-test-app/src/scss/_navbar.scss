@@ -1,5 +1,6 @@
 .navbar {
   background-color: $white-color;
+  box-shadow: 3px 0px 20px 0px #0000000a;
 
   nav {
     display: flex;
@@ -11,7 +12,7 @@
     }
 
     .logo-wrapper {
-      gap: 15rem;
+      gap: 1rem;
 
       .searchbar {
         border: 1px solid rgba(84, 95, 125, 0.15);

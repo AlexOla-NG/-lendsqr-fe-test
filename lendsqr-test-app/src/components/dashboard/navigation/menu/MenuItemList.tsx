@@ -20,32 +20,32 @@ import { ReactComponent as FeesLogo } from "../../../../assets/images/badge-perc
 import { ReactComponent as AuditLogo } from "../../../../assets/images/clipboard-list 1.svg";
 
 const customers: IMenuItem[] = [
-  { startAdornment: <UsersLogo />, title: "Users" },
-  { startAdornment: <GurantorsLogo />, title: "Guarantors" },
-  { startAdornment: <SackLogo />, title: "Loans" },
-  { startAdornment: <HandshakeLogo />, title: "Decision Models" },
-  { startAdornment: <PiggyBankLogo />, title: "Savings" },
-  { startAdornment: <LoanRequestLogo />, title: "Loan Requests" },
-  { startAdornment: <WhitelistLogo />, title: "Whitelist" },
-  { startAdornment: <KarmaLogo />, title: "Karma" },
+  { startAdornment: <UsersLogo />, title: "users" },
+  { startAdornment: <GurantorsLogo />, title: "guarantors" },
+  { startAdornment: <SackLogo />, title: "loans" },
+  { startAdornment: <HandshakeLogo />, title: "decision models" },
+  { startAdornment: <PiggyBankLogo />, title: "savings" },
+  { startAdornment: <LoanRequestLogo />, title: "loan requests" },
+  { startAdornment: <WhitelistLogo />, title: "whitelist" },
+  { startAdornment: <KarmaLogo />, title: "karma" },
 ];
 
 const businesses: IMenuItem[] = [
-  { startAdornment: <BriefcaseLogo />, title: "Organization" },
-  { startAdornment: <LoanRequestLogo />, title: "Loan Products" },
-  { startAdornment: <SavingsLogo />, title: "Savings Product" },
-  { startAdornment: <CoinsLogo />, title: "Fees and Charges" },
-  { startAdornment: <TransactionsLogo />, title: "Transactions" },
-  { startAdornment: <ServicesLogo />, title: "Services" },
-  { startAdornment: <UserCogLogo />, title: "Service Account" },
-  { startAdornment: <SettlementsLogo />, title: "Settlements" },
-  { startAdornment: <ReportsLogo />, title: "Reports" },
+  { startAdornment: <BriefcaseLogo />, title: "organization" },
+  { startAdornment: <LoanRequestLogo />, title: "loan products" },
+  { startAdornment: <SavingsLogo />, title: "savings product" },
+  { startAdornment: <CoinsLogo />, title: "fees and charges" },
+  { startAdornment: <TransactionsLogo />, title: "transactions" },
+  { startAdornment: <ServicesLogo />, title: "services" },
+  { startAdornment: <UserCogLogo />, title: "service account" },
+  { startAdornment: <SettlementsLogo />, title: "settlements" },
+  { startAdornment: <ReportsLogo />, title: "reports" },
 ];
 
 const settings: IMenuItem[] = [
-  { startAdornment: <PreferencesLogo />, title: "Preferences" },
-  { startAdornment: <FeesLogo />, title: "Fees and Pricing" },
-  { startAdornment: <AuditLogo />, title: "Audit Logs" },
+  { startAdornment: <PreferencesLogo />, title: "preferences" },
+  { startAdornment: <FeesLogo />, title: "fees and pricing" },
+  { startAdornment: <AuditLogo />, title: "audit logs" },
 ];
 
 export { customers, businesses, settings };

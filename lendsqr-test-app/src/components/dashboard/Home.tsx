@@ -9,12 +9,12 @@ import Sidebar from "./navigation/Sidebar copy";
 
 const Home = () => {
   return (
-    <>
+    <div className="home">
       <Navbar />
       <Sidebar />
       Home
       <Outlet />
-    </>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-@import 'resets', 'variables', 'config', 'login', 'navbar', 'sidebar', 'responsiveness';
+@import 'resets', 'variables', 'config', 'login', 'home', 'navbar', 'sidebar', 'responsiveness';
 
 body {
   background-color: $white-color;
@@ -6,7 +6,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
   font-weight: weight(regular);
-  padding: 1rem 1.5rem;
+  // padding: 1rem 1.5rem;
 }
 
 input,
