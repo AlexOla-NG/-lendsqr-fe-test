@@ -108,7 +108,7 @@
   align-items: center;
 }
 .navbar nav .logo-wrapper {
-  gap: 5rem;
+  gap: 15rem;
 }
 .navbar nav .logo-wrapper .searchbar {
   border: 1px solid rgba(84, 95, 125, 0.15);
@@ -147,6 +147,17 @@
   border-radius: 50%;
 }
 
+.sidebar-nav .menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sidebar-nav .menu-list .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 @media screen and (min-width: 768px) {
   .login {
     display: grid;
@@ -178,7 +189,10 @@
 }
 @media screen and (min-width: 1024px) {
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
+  }
+  .sidebar {
+    padding: 0 1.5rem;
   }
   .login {
     padding: 2rem 2.5rem;

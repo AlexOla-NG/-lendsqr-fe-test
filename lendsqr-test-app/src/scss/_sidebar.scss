@@ -1,3 +1,15 @@
 .sidebar {
-  &-nav {}
+
+  &-nav {
+
+    .menu-list {
+      @include flex-column;
+      gap: 2rem;
+
+      .menu-item {
+        @include flex-align-center;
+        gap: 0.5rem
+      }
+    }
+  }
 }
