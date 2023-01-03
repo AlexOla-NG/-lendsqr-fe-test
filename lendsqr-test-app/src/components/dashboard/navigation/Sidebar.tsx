@@ -1,75 +1,89 @@
 import React from "react";
+import MenuItem from "./menu/MenuItem";
+import { customers, businesses, settings } from "./menu/MenuItemList";
+import Searchbar from "../Searchbar";
+import { ReactComponent as BriefcaseLogo } from "../../../assets/images/briefcase 1.svg";
+import { ReactComponent as Chevron } from "../../../assets/images/chevron.svg";
+import { ReactComponent as Home } from "../../../assets/images/home 1.svg";
+import { ReactComponent as Notification } from "../../../assets/images/notificationIcon.svg";
+import { ReactComponent as Dropdown } from "../../../assets/images/dropdownIcon.svg";
+import ProfilePicture from "../../../assets/images/profilePicture.png";
 
 const Sidebar = () => {
-  //display flyout mobile-menu
-  // $(".nav__toggle").on("click", function () {
-  //   $(".nav, .mobile-mask").toggleClass("show");
-  // });
-
-  // $(".mobile-mask").on("click", function () {
-  //   $(".nav, .mobile-mask").removeClass("show");
-  // });
-
   return (
-    <>
-      <div className="top-bar">
-        <i className="nav__toggle fa fa-bars" aria-hidden="true"></i>
-      </div>
-      <div className="mobile-mask"></div>
-      <nav className="nav">
-        <div className="nav__item overview">
-          <i className="fa fa-home" aria-hidden="true"></i>
-          <span>Overview</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-line-chart" aria-hidden="true"></i>
-          <span>Analytics</span>
-        </div>
-        <label className="nav__label">Develop</label>
-        <div className="nav__item">
-          <i className="fa fa-users" aria-hidden="true"></i>
-          <span>Authentication</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-database" aria-hidden="true"></i>
-          <span>Database</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-folder" aria-hidden="true"></i>
-          <span>Storage</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-globe" aria-hidden="true"></i>
-          <span>Hosting</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-mobile" aria-hidden="true"></i>
-          <span>Test Lab</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-bug" aria-hidden="true"></i>
-          <span>Crash Reporting</span>
-        </div>
-        <label className="nav__label">Grow</label>
-        <div className="nav__item">
-          <i className="fa fa-commenting" aria-hidden="true"></i>
-          <span>Notifications</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-map-signs" aria-hidden="true"></i>
-          <span>Remote Config</span>
-        </div>
-        <div className="nav__item">
-          <i className="fa fa-link" aria-hidden="true"></i>
-          <span>Dynamic Links</span>
-        </div>
-        <label className="nav__label">Earn</label>
-        <div className="nav__item">
-          <i className="fa fa-link" aria-hidden="true"></i>
-          <span>Ad Mob</span>
+    <div className="sidebar screensaver">
+      <nav className="sidebar-nav">
+        <div className="menu-list">
+          <div className="nav">
+            <Searchbar />
+
+            <div className="profile-wrapper">
+              <div className="profile-info flex-align-center">
+                <img src={ProfilePicture} alt="profile pic" />
+                <p>Adedeji</p>
+                <Dropdown />
+              </div>
+              <button className="btn">Docs</button>
+              <Notification />
+            </div>
+          </div>
+
+          <div className="organization">
+            <MenuItem
+              startAdornment={<BriefcaseLogo />}
+              title="Switch Organization"
+              endAdornment={<Chevron />}
+            />
+          </div>
+
+          <div className="dashboard">
+            <MenuItem startAdornment={<Home />} title="Dashboard" />
+          </div>
+
+          <div className="menu-list-section">
+            <h3>customers</h3>
+            {customers.map((item, index) => {
+              const { startAdornment, title } = item;
+              return (
+                <MenuItem
+                  key={index}
+                  startAdornment={startAdornment}
+                  title={title}
+                />
+              );
+            })}
+          </div>
+
+          <div className="menu-list-section">
+            <h3>businesses</h3>
+            {businesses.map((item, index) => {
+              const { startAdornment, title } = item;
+              return (
+                <MenuItem
+                  key={index}
+                  startAdornment={startAdornment}
+                  title={title}
+                />
+              );
+            })}
+          </div>
+
+          <div className="menu-list-section">
+            <h3>settings</h3>
+            {settings.map((item, index) => {
+              const { startAdornment, title } = item;
+              return (
+                <MenuItem
+                  key={index}
+                  startAdornment={startAdornment}
+                  title={title}
+                />
+              );
+            })}
+          </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 

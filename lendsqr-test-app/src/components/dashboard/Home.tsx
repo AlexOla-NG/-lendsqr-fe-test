@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "./navigation/Navbar";
-// import Sidebar from "./navigation/Sidebar";
-import Sidebar from "./navigation/Sidebar copy";
-
-// TODO: stopped here
-// create navbar & sidebar components
-// make navbar & sidebar responsive. Don't forget to do this
+import Sidebar from "./navigation/Sidebar";
 
 const Home = () => {
   const navigate = useNavigate();

@@ -1,4 +1,5 @@
 .sidebar {
+  background-color: $white-color;
   box-shadow: 0px 5px 20px 0px #0000000a;
   position: absolute;
   width: 17.688rem;
@@ -8,8 +9,7 @@
 
 
     .menu-list {
-      // @include flex-column;
-      // gap: 2rem;
+
       display: grid;
       grid-template-columns: repeat(12, 1fr);
 
@@ -62,7 +62,61 @@
   }
 }
 
-.screensaver {
+.screensaver,
+.nav {
+  transform: translateX(-150%);
+  transition: transform 350ms ease-in-out 100ms;
+}
+
+.nav {
   display: none;
-  // position: relative;
+  grid-column: 2/-2;
+
+  .searchbar {
+    border: 1px solid rgba(84, 95, 125, 0.15);
+    border-radius: radius(xx-regular);
+    display: flex;
+    align-items: center;
+
+    &-term {
+      width: 100%;
+      border-right: none;
+      padding: 0.75rem 1rem;
+      height: 2.5rem;
+    }
+
+    &-button {
+      width: 3rem;
+      height: 2.5rem;
+      background: $accent-color;
+      text-align: center;
+      border-radius: 0 8px 8px 0;
+    }
+  }
+
+  .profile-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+
+    .profile-info {
+      gap: 0.5rem;
+
+      img {
+        border-radius: 50%;
+      }
+
+    }
+  }
+}
+
+/* Navigation open styles */
+.nav-open .nav {
+  display: block;
+}
+
+.nav-open .screensaver,
+.nav {
+  transform: translateX(0);
 }

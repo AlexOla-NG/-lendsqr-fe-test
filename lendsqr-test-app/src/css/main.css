@@ -198,7 +198,21 @@
   display: none;
 }
 
+/* Navigation open styles */
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  opacity: 0;
+}
+
+.nav-open .hamburger::after {
+  transform: rotate(90deg) translate(-6px);
+}
+
 .sidebar {
+  background-color: #FFFFFF;
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.0392156863);
   position: absolute;
   width: 17.688rem;
@@ -248,8 +262,56 @@
   grid-column: 2/-1;
 }
 
-.screensaver {
+.screensaver,
+.nav {
+  transform: translateX(-150%);
+  transition: transform 350ms ease-in-out 100ms;
+}
+
+.nav {
   display: none;
+  grid-column: 2/-2;
+}
+.nav .searchbar {
+  border: 1px solid rgba(84, 95, 125, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.nav .searchbar-term {
+  width: 100%;
+  border-right: none;
+  padding: 0.75rem 1rem;
+  height: 2.5rem;
+}
+.nav .searchbar-button {
+  width: 3rem;
+  height: 2.5rem;
+  background: #39CDCC;
+  text-align: center;
+  border-radius: 0 8px 8px 0;
+}
+.nav .profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 0;
+}
+.nav .profile-wrapper .profile-info {
+  gap: 0.5rem;
+}
+.nav .profile-wrapper .profile-info img {
+  border-radius: 50%;
+}
+
+/* Navigation open styles */
+.nav-open .nav {
+  display: block;
+}
+
+.nav-open .screensaver,
+.nav {
+  transform: translateX(0);
 }
 
 .users h1 {
@@ -260,7 +322,7 @@
 }
 .users .summarycard-wrapper {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 .users .summarycard-wrapper .summarycard {
@@ -271,7 +333,7 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
   border-radius: 4px;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  grid-column: span 12;
+  max-width: 15rem;
   padding: 1.5rem 2rem 2rem;
 }
 .users .summarycard-wrapper .summarycard .title {
@@ -331,7 +393,7 @@
     padding: 4rem 3rem;
   }
   .screensaver {
-    display: block;
+    transform: translateX(0);
   }
   .login {
     padding: 2rem 2.5rem;
@@ -341,10 +403,6 @@
   }
   .users h1 {
     padding-bottom: 4rem;
-  }
-  .users .summarycard-wrapper .summarycard {
-    grid-column: span 3;
-    max-width: 15rem;
   }
 }
 @media screen and (min-width: 2560px) {
@@ -376,4 +434,9 @@ button {
 
 .input-wrapper {
   border: 2px solid rgba(84, 95, 125, 0.15);
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
