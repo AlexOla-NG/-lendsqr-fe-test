@@ -3,7 +3,8 @@ import SummaryCard from "../components/summarycard/SummaryCard";
 import { summarycardlist } from "../components/summarycard/SummaryCardList";
 
 // TODO: stopped here
-// style summarycard
+// make summarycard responsive
+// create, add & style user table component
 
 const Users = () => {
   return (

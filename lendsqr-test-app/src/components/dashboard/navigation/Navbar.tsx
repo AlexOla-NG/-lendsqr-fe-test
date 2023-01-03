@@ -8,7 +8,22 @@ import ProfilePicture from "../../../assets/images/profilePicture.png";
 const Navbar = () => {
   return (
     <header className="navbar">
-      <nav>
+      {/* MOBILE VIEW */}
+
+      <nav className="navbar-mobile">
+        <div className="flex-align-center logo-wrapper">
+          <Logo />
+        </div>
+
+        <div className="hamburger-wrapper">
+          <button className="nav__toggle">
+            <span className="hamburger"></span>
+          </button>
+        </div>
+      </nav>
+
+      {/* DESKTOP VIEW */}
+      <nav className="navbar-desktop">
         <div className="flex-align-center logo-wrapper">
           <Logo />
           <Searchbar />

@@ -101,18 +101,13 @@
 .home .output {
   background: #E5E5E5;
   height: 79.813rem;
-  margin-left: 17.688rem;
-  padding: 4rem 3rem;
+  padding: 2rem 1.5rem;
 }
 
 .navbar {
   background-color: #FFFFFF;
   box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.0392156863);
-}
-.navbar nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 100%;
 }
 .navbar nav .flex-align-center {
   display: flex;
@@ -141,49 +136,6 @@
   text-align: center;
   border-radius: 0 8px 8px 0;
 }
-.navbar nav .hamburger-wrapper {
-  display: none;
-}
-.navbar nav .hamburger-wrapper .nav__toggle {
-  position: absolute;
-  left: 0;
-  width: 3em;
-  height: 3em;
-  transform: translateX(-150%);
-  background: #39CDCC;
-  border: 0;
-  border-radius: 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 350ms ease-in-out, left 350ms linear, background 150ms linear;
-  z-index: 10;
-  padding: 0;
-}
-.navbar nav .hamburger-wrapper .hamburger {
-  display: block;
-  position: relative;
-}
-.navbar nav .hamburger-wrapper .hamburger,
-.navbar nav .hamburger-wrapper .hamburger::before,
-.navbar nav .hamburger-wrapper .hamburger::after {
-  width: 1.5em;
-  height: 3px;
-  background: #FFFFFF;
-  transition: transform 350ms ease-in-out, opacity 200ms linear;
-}
-.navbar nav .hamburger-wrapper .hamburger::before,
-.navbar nav .hamburger-wrapper .hamburger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-}
-.navbar nav .hamburger-wrapper .hamburger::before {
-  bottom: 6px;
-}
-.navbar nav .hamburger-wrapper .hamburger::after {
-  top: 6px;
-}
 .navbar nav .profile-wrapper {
   gap: 3rem;
 }
@@ -199,6 +151,51 @@
 }
 .navbar nav .profile-wrapper .profile-info img {
   border-radius: 50%;
+}
+.navbar-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+.navbar-mobile .hamburger-wrapper .nav__toggle {
+  width: 3em;
+  height: 3em;
+  border: 0;
+  border-radius: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 350ms ease-in-out, left 350ms linear, background 150ms linear;
+  z-index: 10;
+  padding: 0;
+}
+.navbar-mobile .hamburger-wrapper .hamburger {
+  display: block;
+  position: relative;
+}
+.navbar-mobile .hamburger-wrapper .hamburger,
+.navbar-mobile .hamburger-wrapper .hamburger::before,
+.navbar-mobile .hamburger-wrapper .hamburger::after {
+  width: 1.5em;
+  height: 3px;
+  background: #213F7D;
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+.navbar-mobile .hamburger-wrapper .hamburger::before,
+.navbar-mobile .hamburger-wrapper .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.navbar-mobile .hamburger-wrapper .hamburger::before {
+  bottom: 6px;
+}
+.navbar-mobile .hamburger-wrapper .hamburger::after {
+  top: 6px;
+}
+.navbar-desktop {
+  display: none;
 }
 
 .sidebar {
@@ -251,11 +248,15 @@
   grid-column: 2/-1;
 }
 
+.screensaver {
+  display: none;
+}
+
 .users h1 {
   color: #213F7D;
   font-size: 1.5rem;
   font-weight: 500;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 .users .summarycard-wrapper {
   display: grid;
@@ -270,8 +271,7 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
   border-radius: 4px;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  grid-column: span 3;
-  max-width: 15rem;
+  grid-column: span 12;
   padding: 1.5rem 2rem 2rem;
 }
 .users .summarycard-wrapper .summarycard .title {
@@ -314,11 +314,21 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .navbar {
+  .home .navbar {
     padding: 1.5rem;
   }
-  .navbar nav .logo-wrapper {
-    gap: 15rem;
+  .home .navbar-mobile,
+.home .navbar .hamburger-wrapper {
+    display: none;
+  }
+  .home .navbar-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .home .output {
+    margin-left: 17.688rem;
+    padding: 4rem 3rem;
   }
   .screensaver {
     display: block;
@@ -328,6 +338,13 @@
   }
   .login-form .form-wrapper {
     grid-column: 3/-4;
+  }
+  .users h1 {
+    padding-bottom: 4rem;
+  }
+  .users .summarycard-wrapper .summarycard {
+    grid-column: span 3;
+    max-width: 15rem;
   }
 }
 @media screen and (min-width: 2560px) {
