@@ -102,7 +102,7 @@ I also need more practice with JS hoisting and closures. I think there are certa
 ### Useful resources
 
 - [Simple Search Bar by Emily Huang](https://codepen.io/huange/pen/bGqMqM?editors=1100) - This helped me quickly build the searchbar.
-- [Hoisting in JavaScript Explained | resource 2](https://www.youtube.com/watch?v=ppMlvGMT2qE) - This helped me understand how hoisting works in JavaScript.
+- [Format Numbers with Commas in JavaScript](https://sabe.io/blog/javascript-format-numbers-commas#:~:text=The%20best%20way%20to%20format,format%20the%20number%20with%20commas.) - This helped me understand how to add commas to numbers (eg 1,000 1,000,000) in JavaScript.
 - [Hoisting | resource 3](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) - This is the mdn documentation for how hoisting works in JavaScript.
 - [Grid auto-flow resource 1](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout) - This helped me flow grid items by column, rather than the defailt row. I really liked this pattern and will use it going forward.
 - [HEX to Filter converter for SVG](https://codepen.io/sosuke/pen/Pjoqqp) - This helped me easily change the color of SVG icons in img tag. I really liked this resource and will use it going forward.

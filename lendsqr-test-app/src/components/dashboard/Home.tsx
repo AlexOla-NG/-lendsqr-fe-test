@@ -6,6 +6,7 @@ import Sidebar from "./navigation/Sidebar copy";
 
 // TODO: stopped here
 // create navbar & sidebar components
+// make navbar & sidebar responsive. Don't forget to do this
 
 const Home = () => {
   const navigate = useNavigate();
