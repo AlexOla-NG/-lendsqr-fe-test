@@ -1,0 +1,19 @@
+.users {
+
+
+  h1 {
+    color: $primary-color;
+    font-size: size(fs-h2);
+    font-weight: weight(medium);
+    padding-bottom: 4rem;
+  }
+
+  .summarycard-wrapper {
+    @include flex-align-center;
+    justify-content: space-between;
+
+    .summarycard {
+      background-color: $white-color;
+    }
+  }
+}

@@ -38,6 +38,56 @@
       }
     }
 
+    .hamburger-wrapper {
+      display: none;
+
+      .nav__toggle {
+        position: absolute;
+        left: 0;
+        width: 3em;
+        height: 3em;
+        transform: translateX(-150%);
+        background: $accent-color;
+        border: 0;
+        border-radius: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 350ms ease-in-out, left 350ms linear, background 150ms linear;
+        z-index: 10;
+        padding: 0;
+      }
+
+      .hamburger {
+        display: block;
+        position: relative;
+      }
+
+      .hamburger,
+      .hamburger::before,
+      .hamburger::after {
+        width: 1.5em;
+        height: 3px;
+        background: $white-color;
+        transition: transform 350ms ease-in-out, opacity 200ms linear;
+      }
+
+      .hamburger::before,
+      .hamburger::after {
+        content: '';
+        position: absolute;
+        left: 0;
+      }
+
+      .hamburger::before {
+        bottom: 6px;
+      }
+
+      .hamburger::after {
+        top: 6px;
+      }
+    }
+
     .profile-wrapper {
       gap: 3rem;
 

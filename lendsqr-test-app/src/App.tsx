@@ -31,8 +31,8 @@ function App() {
             )
           }
         >
-          <Route index path="users" element={<Users />} />
-          <Route path=":userdetails" element={<UserDetails />} />
+          <Route path="users" element={<Users />} />
+          <Route path="users/:id" element={<UserDetails />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

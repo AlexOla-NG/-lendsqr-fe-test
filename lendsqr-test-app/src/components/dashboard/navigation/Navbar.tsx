@@ -13,14 +13,22 @@ const Navbar = () => {
           <Logo />
           <Searchbar />
         </div>
-        <div className="flex-align-center profile-wrapper">
-          <button className="btn">Docs</button>
-          <div className="profile flex-align-center">
-            <Notification />
-            <div className="profile-info flex-align-center">
-              <img src={ProfilePicture} alt="profile pic" />
-              <p>Adedeji</p>
-              <Dropdown />
+
+        {/* <div className="hamburger-wrapper">
+          <button className="nav__toggle">
+            <span className="hamburger"></span>
+          </button>
+        </div> */}
+        <div className="screensaver">
+          <div className="flex-align-center profile-wrapper">
+            <button className="btn">Docs</button>
+            <div className="profile flex-align-center">
+              <Notification />
+              <div className="profile-info flex-align-center">
+                <img src={ProfilePicture} alt="profile pic" />
+                <p>Adedeji</p>
+                <Dropdown />
+              </div>
             </div>
           </div>
         </div>
