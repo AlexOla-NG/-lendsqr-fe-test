@@ -345,6 +345,30 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
+.users .data-table {
+  margin-top: 2rem;
+  overflow-x: scroll;
+}
+.users .data-table table {
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  padding: 1rem;
+  min-width: 64.813rem;
+}
+.users .data-table table thead tr th {
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.users .data-table table thead tr th .table-head {
+  display: flex;
+  gap: 1rem;
+}
+.users .data-table table tbody tr td {
+  padding: 1rem 1.5rem;
+}
 
 @media screen and (min-width: 768px) {
   .login {
@@ -403,6 +427,9 @@
   }
   .users h1 {
     padding-bottom: 4rem;
+  }
+  .users .data-table {
+    overflow-x: hidden;
   }
 }
 @media screen and (min-width: 2560px) {

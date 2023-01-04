@@ -36,4 +36,45 @@
       }
     }
   }
+
+  .data-table {
+    // background-color: $white-color;
+    margin-top: 2rem;
+    overflow-x: scroll;
+
+    table {
+      background-color: $white-color;
+      border-collapse: collapse;
+      font-size: size(fs-body1);
+      padding: 1rem;
+
+      min-width: 64.813rem;
+
+      thead {
+        tr {
+          th {
+            font-weight: weight(bold);
+            padding: 1rem 1.5rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            .table-head {
+              display: flex;
+              gap: 1rem;
+
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 1rem 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
 }

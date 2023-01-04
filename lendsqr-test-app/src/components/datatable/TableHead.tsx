@@ -7,8 +7,10 @@ import { ITableHead } from "./interface";
 const TableHead = ({ title, endAdornment }: ITableHead) => {
   return (
     <th>
-      {title}
-      <button>{endAdornment}</button>
+      <div className="table-head">
+        {title}
+        <button>{endAdornment}</button>
+      </div>
     </th>
   );
 };
