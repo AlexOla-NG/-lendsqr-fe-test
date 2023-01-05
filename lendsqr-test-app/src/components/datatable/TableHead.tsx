@@ -1,15 +1,20 @@
 import React from "react";
-import { ITableHead } from "./interface";
+import { ITableHeadComponent } from "./interface";
 
-// TODO: stopped here
-// style TableHead
+const TableHead = ({
+  title,
+  endAdornment,
+  handleToggle,
+}: ITableHeadComponent) => {
+  const handleClick = () => {
+    handleToggle();
+  };
 
-const TableHead = ({ title, endAdornment }: ITableHead) => {
   return (
     <th>
       <div className="table-head">
         {title}
-        <button>{endAdornment}</button>
+        <button onClick={handleClick}>{endAdornment}</button>
       </div>
     </th>
   );

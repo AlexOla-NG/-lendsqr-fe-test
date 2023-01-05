@@ -11,13 +11,25 @@ const TableRow = ({
   phoneNumber,
   userName,
 }: ITableRow) => {
+  const strToDate = (date: string) => {
+    let newDate = new Date(date);
+
+    return newDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+
   return (
     <tr>
       <td>{orgName}</td>
-      <td>{createdAt}</td>
-      <td>{email}</td>
-      <td>{phoneNumber}</td>
       <td>{userName}</td>
+      <td>{email.toLowerCase()}</td>
+      <td>{phoneNumber}</td>
+      <td>{strToDate(createdAt)}</td>
       <td>Pending</td>
       <td>
         <MoreVertIcon />

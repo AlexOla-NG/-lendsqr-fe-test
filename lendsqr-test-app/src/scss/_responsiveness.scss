@@ -31,6 +31,12 @@
       }
     }
   }
+
+  .home {
+    .output {
+      height: 88.438rem;
+    }
+  }
 }
 
 @include media-lg {
@@ -58,6 +64,7 @@
     }
 
     .output {
+      height: 79.813rem;
       margin-left: 17.688rem;
       padding: 4rem 3rem;
     }
@@ -94,6 +101,7 @@
     .data-table {
 
       overflow-x: hidden;
+
     }
   }
 }

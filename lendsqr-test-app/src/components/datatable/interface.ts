@@ -5,6 +5,10 @@ export interface ITableHead {
   endAdornment: ReactNode;
 }
 
+export interface ITableHeadComponent extends ITableHead {
+  handleToggle(): void;
+}
+
 // TODO: don't forget to expand the interface props after switching from mock to api data
 export interface ITableRow {
   id?: string;

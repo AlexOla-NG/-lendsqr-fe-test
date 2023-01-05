@@ -100,7 +100,6 @@
 }
 .home .output {
   background: #E5E5E5;
-  height: 79.813rem;
   padding: 2rem 1.5rem;
 }
 
@@ -349,25 +348,45 @@
   margin-top: 2rem;
   overflow-x: scroll;
 }
-.users .data-table table {
+.users .data-table .table-wrapper {
   background-color: #FFFFFF;
+  min-width: 64.813rem;
+  padding: 1rem;
+}
+.users .data-table .table-wrapper table {
   border-collapse: collapse;
   font-size: 0.875rem;
-  padding: 1rem;
-  min-width: 64.813rem;
+  width: 100%;
 }
-.users .data-table table thead tr th {
+.users .data-table .table-wrapper table thead tr th {
   font-weight: 600;
-  padding: 1rem 1.5rem;
   text-transform: uppercase;
-  white-space: nowrap;
 }
-.users .data-table table thead tr th .table-head {
+.users .data-table .table-wrapper table thead tr th .table-head {
   display: flex;
   gap: 1rem;
 }
-.users .data-table table tbody tr td {
-  padding: 1rem 1.5rem;
+.users .data-table .table-wrapper table tbody tr {
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+}
+.users .data-table .table-wrapper table tbody tr:last-of-type {
+  border-bottom: none;
+}
+.users .data-table .table-wrapper table th,
+.users .data-table .table-wrapper table td {
+  padding: 1rem;
+  white-space: nowrap;
+}
+.users .data-table .table-wrapper table th:first-of-type,
+.users .data-table .table-wrapper table td:first-of-type {
+  padding-left: 0;
+}
+.users .data-table .table-wrapper table th:last-of-type,
+.users .data-table .table-wrapper table td:last-of-type {
+  padding-right: 0;
+}
+.users .data-table .table-wrapper table td:last-of-type {
+  padding-left: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -398,6 +417,9 @@
   .login-form .form-wrapper {
     grid-column: 2/-2;
   }
+  .home .output {
+    height: 88.438rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .home .navbar {
@@ -413,6 +435,7 @@
     justify-content: space-between;
   }
   .home .output {
+    height: 79.813rem;
     margin-left: 17.688rem;
     padding: 4rem 3rem;
   }
