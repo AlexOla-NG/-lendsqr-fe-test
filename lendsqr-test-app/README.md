@@ -105,7 +105,8 @@ I also need more practice with JS hoisting and closures. I think there are certa
 - [Format Numbers with Commas in JavaScript](https://sabe.io/blog/javascript-format-numbers-commas#:~:text=The%20best%20way%20to%20format,format%20the%20number%20with%20commas.) - This helped me understand how to add commas to numbers (eg 1,000 1,000,000) in JavaScript.
 - [Styling HTML tables with CSS - Web Design/UX Tutorial](https://www.youtube.com/watch?v=biI9OFH6Nmg) - This helped me easily apply CSS styles to a table.
 - [:last-of-type](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-of-type) - This helped me select the last tr element in a table. I really liked this pattern and will use it going forward.
-- [HEX to Filter converter for SVG](https://codepen.io/sosuke/pen/Pjoqqp) - This helped me easily change the color of SVG icons in img tag. I really liked this resource and will use it going forward.
+- [How to make absolute positioned elements overlap their overflow hidden parent](https://front-back.com/how-to-make-absolute-positioned-elements-overlap-their-overflow-hidden-parent/) - This helped me easily position an absolute element within a relative one which had its overflow set to scroll. I really liked this resource and will use it going forward.
+- [Change date input triangle to a calendar icon](https://stackoverflow.com/questions/29436074/change-date-input-triangle-to-a-calendar-icon) - This helped me easily change the icon on a date input element. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author

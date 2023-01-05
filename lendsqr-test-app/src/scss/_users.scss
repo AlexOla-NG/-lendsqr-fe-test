@@ -1,4 +1,5 @@
 .users {
+  // position: relative;
 
 
   h1 {
@@ -37,70 +38,164 @@
     }
   }
 
-  .data-table {
-    margin-top: 2rem;
-    overflow-x: scroll;
+  section {
+    position: relative;
 
-    .table-wrapper {
+    .data-table {
+      margin-top: 2rem;
+      overflow-x: scroll;
 
-      background-color: $white-color;
-      min-width: 64.813rem;
-      padding: 1rem;
+      .table-wrapper {
+
+        background-color: $white-color;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        min-width: 64.813rem;
+        padding: 1rem;
 
 
-      table {
-        // background-color: $white-color;
-        border-collapse: collapse;
-        font-size: size(fs-body1);
-        width: 100%;
+        table {
+          // background-color: $white-color;
+          border-collapse: collapse;
+          font-size: size(fs-body1);
+          // overflow-x: scroll;
+          width: 100%;
 
-        thead {
-          tr {
-            th {
-              font-weight: weight(bold);
-              text-transform: uppercase;
+          thead {
+            tr {
+              th {
+                font-weight: weight(bold);
+                text-transform: uppercase;
 
-              .table-head {
-                display: flex;
-                gap: 1rem;
+                .table-head {
+                  display: flex;
+                  gap: 1rem;
 
+                }
               }
             }
           }
-        }
 
-        tbody {
-          tr {
-            border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+          tbody {
+            tr {
+              border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+            }
+
+            tr:last-of-type {
+              border-bottom: none;
+            }
           }
 
-          tr:last-of-type {
-            border-bottom: none;
+          th,
+          td {
+            padding: 1rem;
+            white-space: nowrap;
+          }
+
+          th:first-of-type,
+          td:first-of-type {
+            padding-left: 0;
+          }
+
+          th:last-of-type,
+          td:last-of-type {
+            padding-right: 0;
+          }
+
+          td:last-of-type {
+            padding-left: 0;
           }
         }
 
-        th,
-        td {
-          padding: 1rem;
-          white-space: nowrap;
-        }
+        .filter-form {
+          background-color: $white-color;
+          border: 1px solid rgba(84, 95, 125, 0.14);
+          box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+          border-radius: 4px;
+          max-width: 16.875rem;
+          padding: 1.5rem 1rem;
+          position: absolute;
+          top: 4rem;
 
-        th:first-of-type,
-        td:first-of-type {
-          padding-left: 0;
-        }
+          form {
+            @include flex-column;
+            gap: 1.5rem;
 
-        th:last-of-type,
-        td:last-of-type {
-          padding-right: 0;
-        }
+            input,
+            button {
+              background: $white-color;
+              border: 0px;
+              font-family: inherit;
+              font-size: size(fs-p);
+              font-weight: weight(regular);
+              outline: none;
+            }
 
-        td:last-of-type {
-          padding-left: 0;
+            .select-wrapper {
+              @include flex-column;
+              gap: 0.5rem;
+
+              .input-wrapper {
+                border: 1px solid rgba(33, 63, 125, 0.2);
+                border-radius: radius(xx-regular);
+                display: flex;
+                padding: 0.75rem 1rem;
+                position: relative;
+
+
+
+                /* Common input styling */
+                input[type=date],
+                label {
+                  /* Must share same size to display properly (focus, etc.) */
+                  width: 100%;
+                  height: 1em;
+                  font-size: 1em;
+                }
+
+                /* Fields overriding */
+                input[type=date]+label {
+                  position: absolute;
+                  background: white;
+                  width: 45%;
+                }
+
+                .calendar-btn {
+                  position: absolute;
+                  right: 1.1rem;
+                  pointer-events: none;
+                }
+              }
+            }
+
+
+            input {
+              width: 100%;
+            }
+
+            .select-wrapper>p,
+            input::placeholder {
+              text-transform: capitalize;
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+
+              opacity: 0;
+            }
+
+            .btn {
+              text-transform: uppercase;
+            }
+
+            .text-btn {
+              color: $accent-color
+            }
+          }
         }
       }
-    }
 
+    }
   }
 
 }

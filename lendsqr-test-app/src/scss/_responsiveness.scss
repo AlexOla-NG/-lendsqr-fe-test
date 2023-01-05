@@ -98,10 +98,16 @@
       }
     }
 
-    .data-table {
+    section {
+      .data-table {
 
-      overflow-x: hidden;
+        overflow-x: hidden;
 
+        .table-wrapper {
+          padding: 1rem 1.5rem;
+        }
+
+      }
     }
   }
 }
