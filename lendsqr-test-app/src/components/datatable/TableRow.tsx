@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { ITableRow, IStatusPill } from "./interface";
 import StatusPill from "./StatusPill";
 import { ReactComponent as MoreVertIcon } from "../../assets/images/ic-more-vert.svg";
+import OptionsMenu from "./OptionsMenu";
 
 // TODO: add toggle functionality for status switch onclick of MoreVertIcon
 
@@ -12,6 +13,12 @@ const TableRow = ({
   phoneNumber,
   userName,
 }: ITableRow) => {
+  const [isMenu, setIsMenu] = useState<Boolean>(false);
+
+  const handleClick = () => {
+    setIsMenu(!isMenu);
+  };
+
   const strToDate = (date: string) => {
     let newDate = new Date(date);
 
@@ -35,7 +42,10 @@ const TableRow = ({
         <StatusPill status="pending" />
       </td>
       <td>
-        <MoreVertIcon />
+        <div className="more-options-wrapper">
+          <MoreVertIcon onClick={handleClick} />
+          {isMenu && <OptionsMenu />}
+        </div>
       </td>
     </tr>
   );

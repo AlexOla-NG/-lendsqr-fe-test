@@ -69,6 +69,7 @@
 
                 .table-head {
                   display: flex;
+                  font-size: size(fs-body2);
                   gap: 1rem;
 
                 }
@@ -105,7 +106,18 @@
 
           // td:nth-of-type(6),
           td:last-of-type {
-            padding-left: 0;
+            cursor: pointer;
+            padding-left: 0.5rem;
+
+            .more-options-wrapper {
+              position: relative;
+
+              .more-options {
+                position: absolute;
+                top: -60%;
+                left: -700%;
+              }
+            }
           }
         }
 
