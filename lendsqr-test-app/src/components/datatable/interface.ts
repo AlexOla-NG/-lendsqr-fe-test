@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 
-export interface ITableHead {
+export interface ITextIcon {
+  startAdornment?: ReactNode;
   title: string;
-  endAdornment: ReactNode;
+  endAdornment?: ReactNode;
 }
 
-export interface ITableHeadComponent extends ITableHead {
+export interface ITableHeadComponent extends ITextIcon {
   handleToggle(): void;
 }
 

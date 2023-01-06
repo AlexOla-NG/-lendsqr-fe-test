@@ -113,9 +113,27 @@
               position: relative;
 
               .more-options {
+                background: #FFFFFF;
+                border: 1px solid rgba(84, 95, 125, 0.04);
+                box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
+                border-radius: 4px;
+                @include flex-column;
+                gap: 1.5rem;
+                max-width: 11.25rem;
+                padding: 2rem;
                 position: absolute;
                 top: -60%;
                 left: -700%;
+
+                .menu-items-wrapper {
+                  color: $text-color;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  font-size: size(fs-body1);
+                  text-transform: capitalize;
+
+                }
               }
             }
           }

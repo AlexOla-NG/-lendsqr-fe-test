@@ -401,9 +401,26 @@
   position: relative;
 }
 .users section .data-table .table-wrapper table td:last-of-type .more-options-wrapper .more-options {
+  background: #FFFFFF;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 11.25rem;
+  padding: 2rem;
   position: absolute;
   top: -60%;
   left: -700%;
+}
+.users section .data-table .table-wrapper table td:last-of-type .more-options-wrapper .more-options .menu-items-wrapper {
+  color: #545F7D;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  text-transform: capitalize;
 }
 .users section .data-table .table-wrapper .filter-form {
   background-color: #FFFFFF;

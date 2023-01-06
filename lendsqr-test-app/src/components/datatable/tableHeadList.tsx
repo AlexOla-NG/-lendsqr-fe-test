@@ -1,7 +1,7 @@
-import { ITableHead } from "./interface";
+import { ITextIcon } from "./interface";
 import { ReactComponent as FilterButton } from "../../assets/images/filterButton.svg";
 
-export const tableHeaders: ITableHead[] = [
+export const tableHeaders: ITextIcon[] = [
   { title: "organization", endAdornment: <FilterButton /> },
   { title: "username", endAdornment: <FilterButton /> },
   { title: "email", endAdornment: <FilterButton /> },
