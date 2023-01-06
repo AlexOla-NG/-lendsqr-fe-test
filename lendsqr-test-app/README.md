@@ -107,6 +107,8 @@ I also need more practice with JS hoisting and closures. I think there are certa
 - [:last-of-type](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-of-type) - This helped me select the last tr element in a table. I really liked this pattern and will use it going forward.
 - [How to make absolute positioned elements overlap their overflow hidden parent](https://front-back.com/how-to-make-absolute-positioned-elements-overlap-their-overflow-hidden-parent/) - This helped me easily position an absolute element within a relative one which had its overflow set to scroll. I really liked this resource and will use it going forward.
 - [Change date input triangle to a calendar icon](https://stackoverflow.com/questions/29436074/change-date-input-triangle-to-a-calendar-icon) - This helped me easily change the icon on a date input element. I really liked this pattern and will use it going forward.
+- [Using Placeholder On A Date Input In Angular](https://upmostly.com/angular/using-placeholder-on-a-date-input-in-angular) - This provided inspiration for the syntax I used to toggle the date input type so that it allowed for custom placeholder use. I really liked this pattern and will use it going forward.
+- [TypeScript: React useRef Hook](https://www.robinwieruch.de/typescript-react-useref/) - This helped me understand how to manipulate the useRef hook in TypeScript while trying to set the placeholder for the date input. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author

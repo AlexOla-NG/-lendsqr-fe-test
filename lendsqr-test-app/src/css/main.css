@@ -362,6 +362,7 @@
 .users section .data-table .table-wrapper table {
   border-collapse: collapse;
   font-size: 0.875rem;
+  table-layout: fixed;
   width: 100%;
 }
 .users section .data-table .table-wrapper table thead tr th {
@@ -399,7 +400,7 @@
   border: 1px solid rgba(84, 95, 125, 0.14);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  max-width: 16.875rem;
+  max-width: 14.875rem;
   padding: 1.5rem 1rem;
   position: absolute;
   top: 4rem;
@@ -429,23 +430,13 @@
   display: flex;
   padding: 0.75rem 1rem;
   position: relative;
-  /* Common input styling */
-  /* Fields overriding */
 }
-.users section .data-table .table-wrapper .filter-form form .select-wrapper .input-wrapper input[type=date],
-.users section .data-table .table-wrapper .filter-form form .select-wrapper .input-wrapper label {
-  /* Must share same size to display properly (focus, etc.) */
-  width: 100%;
-  height: 1em;
-  font-size: 1em;
-}
-.users section .data-table .table-wrapper .filter-form form .select-wrapper .input-wrapper input[type=date] + label {
-  position: absolute;
-  background: white;
-  width: 45%;
+.users section .data-table .table-wrapper .filter-form form .select-wrapper .input-wrapper input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 .users section .data-table .table-wrapper .filter-form form .select-wrapper .input-wrapper .calendar-btn {
   position: absolute;
+  top: 0.85rem;
   right: 1.1rem;
   pointer-events: none;
 }
@@ -459,17 +450,34 @@
   text-transform: capitalize;
 }
 .users section .data-table .table-wrapper .filter-form form .select-wrapper > p,
-.users section .data-table .table-wrapper .filter-form form input::placeholder {
+.users section .data-table .table-wrapper .filter-form form input::placeholder,
+.users section .data-table .table-wrapper .filter-form form .btn {
   text-transform: capitalize;
 }
-.users section .data-table .table-wrapper .filter-form form input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
+.users section .data-table .table-wrapper .filter-form form .btn-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
 }
-.users section .data-table .table-wrapper .filter-form form .btn {
-  text-transform: uppercase;
+.users section .data-table .table-wrapper .filter-form form .btn-wrapper .btn {
+  padding: 0.6rem 1.5rem;
 }
-.users section .data-table .table-wrapper .filter-form form .text-btn {
-  color: #39CDCC;
+.users section .data-table .table-wrapper .filter-form form .btn-wrapper button:first-of-type {
+  border: 1px solid #545F7D;
+  border-radius: 8px;
+}
+.users section .data-table .table-wrapper .filter-form form .btn-wrapper button:last-of-type {
+  background: #39CDCC;
+  border: 1px solid #39CDCC;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.status-pill {
+  border-radius: 100px;
+  padding: 0.4rem 0.6rem;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 768px) {
@@ -539,6 +547,12 @@
   }
   .users section .data-table .table-wrapper {
     padding: 1rem 1.5rem;
+  }
+  .users section .data-table .table-wrapper .filter-form {
+    max-width: 16.875rem;
+  }
+  .users section .data-table .table-wrapper .filter-form form .btn-wrapper .btn {
+    padding: 0.6rem 1.8rem;
   }
 }
 @media screen and (min-width: 2560px) {

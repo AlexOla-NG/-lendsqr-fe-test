@@ -1,5 +1,6 @@
 import React from "react";
-import { ITableRow } from "./interface";
+import { ITableRow, IStatusPill } from "./interface";
+import StatusPill from "./StatusPill";
 import { ReactComponent as MoreVertIcon } from "../../assets/images/ic-more-vert.svg";
 
 // TODO: add toggle functionality for status switch onclick of MoreVertIcon
@@ -30,7 +31,9 @@ const TableRow = ({
       <td>{email.toLowerCase()}</td>
       <td>{phoneNumber}</td>
       <td>{strToDate(createdAt)}</td>
-      <td>Pending</td>
+      <td>
+        <StatusPill status="pending" />
+      </td>
       <td>
         <MoreVertIcon />
       </td>

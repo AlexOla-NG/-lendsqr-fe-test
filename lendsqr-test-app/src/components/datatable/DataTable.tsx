@@ -6,7 +6,6 @@ import { userData } from "../../mock/mock";
 import FilterForm from "./FilterForm";
 
 // TODO: stopped here
-// create & add filter form
 // finish styling table
 
 const DataTable = () => {
@@ -22,6 +21,14 @@ const DataTable = () => {
           {isFilter && <FilterForm />}
 
           <table>
+            <colgroup>
+              <col width="15%" />
+              <col width="10%" />
+              <col width="20%" />
+              <col width="20%" />
+              <col width="20%" />
+              <col width="10%" />
+            </colgroup>
             <thead>
               <tr>
                 {tableHeaders.map((item, index) => {

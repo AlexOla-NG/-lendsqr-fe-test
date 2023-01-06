@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { ReactComponent as Chevron } from "../../assets/images/chevron.svg";
 import { ReactComponent as Calendar } from "../../assets/images/calendar.svg";
 
@@ -6,9 +6,26 @@ import { ReactComponent as Calendar } from "../../assets/images/calendar.svg";
 // style filterform
 
 const FilterForm = () => {
+  const dateRef = useRef<HTMLInputElement | null>(null);
+
   const handlePreventDefault = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
   };
+
+  const handleFocus = () => {
+    if (dateRef.current) {
+      dateRef.current.type = "date";
+    }
+  };
+
+  const handleBlur = () => {
+    if (dateRef.current) {
+      if (dateRef.current.value === "") {
+        dateRef.current.type = "text";
+      }
+    }
+  };
+
   return (
     <div className="filter-form">
       <form>
@@ -44,10 +61,13 @@ const FilterForm = () => {
         <div className="select-wrapper">
           <p>calendar</p>
           <div className="input-wrapper date-input">
-            <input id="myInput" type="date" />
-            <label htmlFor="myInput">
-              <span className="place-holder">Date</span>
-            </label>
+            <input
+              type="text"
+              ref={dateRef}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              placeholder="date"
+            />
             <button onClick={handlePreventDefault} className="btn calendar-btn">
               <Calendar />
             </button>
@@ -66,15 +86,19 @@ const FilterForm = () => {
         <div className="select-wrapper">
           <p>status</p>
           <div className="input-wrapper">
-            <input type="text" name="status" placeholder="status" />
+            <input type="text" name="status" placeholder="select" />
             <button onClick={handlePreventDefault} className="btn text-btn">
               <Chevron />
             </button>
           </div>
         </div>
         <div className="btn-wrapper">
-          <button onClick={handlePreventDefault}>reset</button>
-          <button onClick={handlePreventDefault}>filter</button>
+          <button className="btn" onClick={handlePreventDefault}>
+            reset
+          </button>
+          <button className="btn" onClick={handlePreventDefault}>
+            filter
+          </button>
         </div>
       </form>
     </div>

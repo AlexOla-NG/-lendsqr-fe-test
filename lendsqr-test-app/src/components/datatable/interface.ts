@@ -19,3 +19,7 @@ export interface ITableRow {
   createdAt: string;
   status?: string;
 }
+
+export interface IStatusPill {
+  status: string;
+}
