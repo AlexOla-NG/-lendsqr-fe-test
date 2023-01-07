@@ -4,19 +4,23 @@ import { ITableHeadComponent } from "./interface";
 const TableHead = ({
   title,
   endAdornment,
-  handleToggle,
+  handleOpen,
 }: ITableHeadComponent) => {
   const handleClick = () => {
-    handleToggle();
+    handleOpen();
   };
 
   return (
-    <th>
-      <div className="table-head">
-        {title}
-        <button onClick={handleClick}>{endAdornment}</button>
-      </div>
-    </th>
+    <div className="item-cell table-head">
+      {title}
+      <button onClick={handleClick}>{endAdornment}</button>
+    </div>
+    // <th>
+    //   <div className="table-head">
+    //     {title}
+    //     <button onClick={handleClick}>{endAdornment}</button>
+    //   </div>
+    // </th>
   );
 };
 

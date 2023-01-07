@@ -9,6 +9,7 @@ import { ITableRow } from "../components/datatable/interface";
 
 const Users = () => {
   const [userData, setUserData] = useState<ITableRow[]>([]);
+  const [isLoading, setIsLoading] = useState<Boolean>(true);
 
   useEffect(() => {
     const getUserData = async () => {
@@ -17,6 +18,7 @@ const Users = () => {
       );
       const response = await request.json();
       setUserData(response);
+      setIsLoading(false);
     };
 
     getUserData();
@@ -32,7 +34,8 @@ const Users = () => {
         })}
       </section>
 
-      {userData.length > 0 && <DataTable {...userData} />}
+      {isLoading && <div>Loading</div>}
+      {userData.length > 0 && <DataTable userData={userData} />}
     </main>
   );
 };

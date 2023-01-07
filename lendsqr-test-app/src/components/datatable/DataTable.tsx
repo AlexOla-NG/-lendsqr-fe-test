@@ -1,21 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
+import ReactPaginate from "react-paginate";
 import TableHead from "./TableHead";
 import { tableHeaders } from "./tableHeadList";
 import TableRow from "./TableRow";
-// import { userData } from "../../mock/mock";
 import FilterForm from "./FilterForm";
-import PaginatedItems from "./PaginatedItems";
 import { ReactComponent as Chevron } from "../../assets/images/chevron.svg";
-import { ITableRow } from "./interface";
+import { ReactComponent as PrevButton } from "../../assets/images/previous-btn.svg";
+import { ReactComponent as NextButton } from "../../assets/images/next-btn.svg";
+import { ITableRow, IUserData } from "./interface";
 
 // TODO: stopped here
 // finish styling table
 
-const DataTable = (userData: ITableRow[]) => {
+const DataTable = ({ userData }: IUserData) => {
   const [isFilter, setIsFilter] = useState<Boolean>(false);
+  const [currentItems, setCurrentItems] = useState<ITableRow[] | null>(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 10;
 
-  const handleToggle = () => {
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(userData.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(userData.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, userData]);
+
+  // STUB: change data table when paginate button is clicked
+  const handlePageClick = (event: any) => {
+    const newOffset = (event.selected * itemsPerPage) % userData.length;
+    setItemOffset(newOffset);
+  };
+
+  // STUB: create handlers to toggle filter form
+  const handleOpen = () => {
     setIsFilter(true);
   };
 
@@ -32,7 +50,24 @@ const DataTable = (userData: ITableRow[]) => {
             </OutsideClickHandler>
           )}
 
-          <table>
+          <div className="table">
+            <div className="table-head">
+              <div className="table-row table-row-title">
+                {tableHeaders.map((item, index) => {
+                  return (
+                    <TableHead key={index} {...item} handleOpen={handleOpen} />
+                  );
+                })}
+              </div>
+            </div>
+            <div className="table-body">
+              {currentItems?.map((user) => {
+                return <TableRow key={user.id} {...user} />;
+              })}
+            </div>
+          </div>
+
+          {/* <table>
             <colgroup>
               <col width="15%" />
               <col width="13%" />
@@ -46,22 +81,19 @@ const DataTable = (userData: ITableRow[]) => {
               <tr>
                 {tableHeaders.map((item, index) => {
                   return (
-                    <TableHead
-                      key={index}
-                      {...item}
-                      handleToggle={handleToggle}
-                    />
+                    <TableHead key={index} {...item} handleOpen={handleOpen} />
                   );
                 })}
               </tr>
             </thead>
             <tbody>
-              {userData.map((user) => {
+              {currentItems?.map((user) => {
                 return <TableRow key={user.id} {...user} />;
               })}
             </tbody>
-          </table>
+          </table> */}
         </div>
+
         <div className="paginate-wrapper">
           <div className="paginate-summary">
             Showing
@@ -71,7 +103,16 @@ const DataTable = (userData: ITableRow[]) => {
             </span>
             out of 100
           </div>
-          <PaginatedItems itemsPerPage={10} />
+          <ReactPaginate
+            containerClassName="paginate"
+            activeLinkClassName="active-link"
+            breakLabel="..."
+            nextLabel={<NextButton />}
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            pageCount={pageCount}
+            previousLabel={<PrevButton />}
+          />
         </div>
       </div>
     </section>

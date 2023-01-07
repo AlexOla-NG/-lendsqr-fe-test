@@ -7,7 +7,7 @@ export interface ITextIcon {
 }
 
 export interface ITableHeadComponent extends ITextIcon {
-  handleToggle(): void;
+  handleOpen(): void;
 }
 
 // TODO: don't forget to expand the interface props after switching from mock to api data
@@ -26,6 +26,10 @@ export interface ITableRow {
   guarantor?: {};
   socials?: {};
   education?: {};
+}
+
+export interface IUserData {
+  userData: ITableRow[];
 }
 
 export interface IStatusPill {
