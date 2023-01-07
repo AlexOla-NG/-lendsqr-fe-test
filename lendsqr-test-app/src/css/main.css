@@ -500,6 +500,45 @@
   border-radius: 8px;
   color: #FFFFFF;
 }
+.users section .data-table .paginate-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.users section .data-table .paginate-wrapper .paginate-summary {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+.users section .data-table .paginate-wrapper .paginate-summary .input-wrapper {
+  background: rgba(33, 63, 125, 0.1);
+  border: none;
+  border-radius: 4px;
+  color: #213F7D;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+.users section .data-table .paginate-wrapper .paginate {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+.users section .data-table .paginate-wrapper .paginate li:first-of-type,
+.users section .data-table .paginate-wrapper .paginate li:last-of-type {
+  background: rgba(33, 63, 125, 0.1);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+.users section .data-table .paginate-wrapper .paginate .active-link {
+  font-weight: 700;
+}
 
 .status-pill {
   border-radius: 100px;
@@ -601,6 +640,9 @@
   }
   .users section .data-table .table-wrapper .filter-form form .btn-wrapper .btn {
     padding: 0.6rem 1.8rem;
+  }
+  .users section .data-table .paginate-wrapper {
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 2560px) {

@@ -1,26 +1,18 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
+import { ReactComponent as PrevButton } from "../../assets/images/previous-btn.svg";
+import { ReactComponent as NextButton } from "../../assets/images/next-btn.svg";
 
 // TODO: stopped here
 // fix component errors and render in Datatable component
-
-// Example items, to simulate fetching from another resources.
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-
-function Items({ currentItems }) {
-  return (
-    <>
-      {currentItems &&
-        currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
-        ))}
-    </>
-  );
+interface IItemsPerPage {
+  itemsPerPage: number;
 }
 
-function PaginatedItems({ itemsPerPage }) {
+// Example items, to simulate fetching from another resources.
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+function PaginatedItems({ itemsPerPage }: IItemsPerPage) {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
@@ -30,11 +22,11 @@ function PaginatedItems({ itemsPerPage }) {
   // from an API endpoint with useEffect and useState)
   const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = items.slice(itemOffset, endOffset);
+  // const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   // Invoke when user click to request another page.
-  const handlePageClick = (event) => {
+  const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
@@ -44,16 +36,19 @@ function PaginatedItems({ itemsPerPage }) {
 
   return (
     <>
-      <Items currentItems={currentItems} />
       <ReactPaginate
+        containerClassName="paginate"
+        activeLinkClassName="active-link"
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel={<NextButton />}
         onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={6}
         pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
+        previousLabel={<PrevButton />}
+        // renderOnZeroPageCount={null}
       />
     </>
   );
 }
+
+export default PaginatedItems;

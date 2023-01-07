@@ -224,6 +224,48 @@
         }
       }
 
+      .paginate-wrapper {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+
+        .paginate-summary {
+          @include flex-align-center;
+          font-size: size(fs-body1);
+
+          .input-wrapper {
+            background: rgba(33, 63, 125, 0.1);
+            border: none;
+            border-radius: 4px;
+            color: $primary-color;
+            @include flex-align-center;
+            gap: 0.75rem;
+            font-weight: weight(medium);
+            margin: 0 0.5rem;
+            padding: 0.5rem 0.75rem;
+          }
+        }
+
+        .paginate {
+          @include flex-align-center;
+          gap: 1.5rem;
+          cursor: pointer;
+          list-style: none;
+
+          li:first-of-type,
+          li:last-of-type {
+            background: rgba(33, 63, 125, 0.1);
+            border-radius: 4px;
+            padding: 0.2rem 0.5rem;
+          }
+
+          .active-link {
+            font-weight: weight(x-bold);
+          }
+        }
+      }
+
     }
   }
 

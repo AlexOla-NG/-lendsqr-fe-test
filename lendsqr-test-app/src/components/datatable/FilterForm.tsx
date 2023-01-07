@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { handlePreventDefault } from "../shared/preventDefault";
 import { ReactComponent as Chevron } from "../../assets/images/chevron.svg";
 import { ReactComponent as Calendar } from "../../assets/images/calendar.svg";
 
@@ -7,10 +8,6 @@ import { ReactComponent as Calendar } from "../../assets/images/calendar.svg";
 
 const FilterForm = () => {
   const dateRef = useRef<HTMLInputElement | null>(null);
-
-  const handlePreventDefault = (event: React.FormEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-  };
 
   const handleFocus = () => {
     if (dateRef.current) {

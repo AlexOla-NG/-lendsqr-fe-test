@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
-
 import TableHead from "./TableHead";
 import { tableHeaders } from "./tableHeadList";
 import TableRow from "./TableRow";
-import { userData } from "../../mock/mock";
+// import { userData } from "../../mock/mock";
 import FilterForm from "./FilterForm";
+import PaginatedItems from "./PaginatedItems";
+import { ReactComponent as Chevron } from "../../assets/images/chevron.svg";
+import { ITableRow } from "./interface";
 
 // TODO: stopped here
 // finish styling table
 
-const DataTable = () => {
+const DataTable = (userData: ITableRow[]) => {
   const [isFilter, setIsFilter] = useState<Boolean>(false);
 
   const handleToggle = () => {
@@ -61,7 +63,15 @@ const DataTable = () => {
           </table>
         </div>
         <div className="paginate-wrapper">
-          <div className="paginate-summary"></div>
+          <div className="paginate-summary">
+            Showing
+            <span className="input-wrapper">
+              100
+              <Chevron />
+            </span>
+            out of 100
+          </div>
+          <PaginatedItems itemsPerPage={10} />
         </div>
       </div>
     </section>

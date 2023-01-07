@@ -19,6 +19,13 @@ export interface ITableRow {
   phoneNumber: string;
   createdAt: string;
   status?: string;
+  lastActiveDate?: string;
+  accountBalance?: string;
+  accountNumber?: string;
+  profile?: {};
+  guarantor?: {};
+  socials?: {};
+  education?: {};
 }
 
 export interface IStatusPill {
