@@ -348,7 +348,7 @@
   position: relative;
 }
 .users section .data-table {
-  margin-top: 2rem;
+  margin-top: 3rem;
   overflow-x: scroll;
 }
 .users section .data-table .table-wrapper {
@@ -408,11 +408,12 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 11.25rem;
-  padding: 2rem;
+  padding: 1.2rem 1.5rem;
   position: absolute;
   top: -60%;
-  left: -700%;
+  left: -250%;
+  width: 11.25rem;
+  z-index: 10;
 }
 .users section .data-table .table-wrapper table td:last-of-type .more-options-wrapper .more-options .menu-items-wrapper {
   color: #545F7D;
@@ -590,7 +591,7 @@
     padding-bottom: 4rem;
   }
   .users section .data-table {
-    overflow-x: hidden;
+    overflow: visible;
   }
   .users section .data-table .table-wrapper {
     padding: 1rem 1.5rem;

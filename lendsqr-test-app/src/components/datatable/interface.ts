@@ -24,3 +24,9 @@ export interface ITableRow {
 export interface IStatusPill {
   status: string;
 }
+
+export interface IOptionsMenu {
+  handleNavigate(): void;
+  blacklistUser(): void;
+  activateUser(): void;
+}

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import OutsideClickHandler from "react-outside-click-handler";
+
 import TableHead from "./TableHead";
 import { tableHeaders } from "./tableHeadList";
 import TableRow from "./TableRow";
@@ -12,13 +14,21 @@ const DataTable = () => {
   const [isFilter, setIsFilter] = useState<Boolean>(false);
 
   const handleToggle = () => {
-    setIsFilter(!isFilter);
+    setIsFilter(true);
+  };
+
+  const handleClose = () => {
+    setIsFilter(false);
   };
   return (
     <section>
       <div className="data-table">
         <div className="table-wrapper">
-          {isFilter && <FilterForm />}
+          {isFilter && (
+            <OutsideClickHandler onOutsideClick={handleClose}>
+              <FilterForm />
+            </OutsideClickHandler>
+          )}
 
           <table>
             <colgroup>
@@ -49,6 +59,9 @@ const DataTable = () => {
               })}
             </tbody>
           </table>
+        </div>
+        <div className="paginate-wrapper">
+          <div className="paginate-summary"></div>
         </div>
       </div>
     </section>

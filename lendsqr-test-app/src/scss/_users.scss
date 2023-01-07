@@ -40,8 +40,9 @@
     position: relative;
 
     .data-table {
-      margin-top: 2rem;
+      margin-top: 3rem;
       overflow-x: scroll;
+
 
       .table-wrapper {
 
@@ -119,11 +120,12 @@
                 border-radius: 4px;
                 @include flex-column;
                 gap: 1.5rem;
-                max-width: 11.25rem;
-                padding: 2rem;
+                padding: 1.2rem 1.5rem;
                 position: absolute;
                 top: -60%;
-                left: -700%;
+                left: -250%;
+                width: 11.25rem;
+                z-index: 10;
 
                 .menu-items-wrapper {
                   color: $text-color;

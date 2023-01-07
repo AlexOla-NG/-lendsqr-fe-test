@@ -109,6 +109,7 @@ I also need more practice with JS hoisting and closures. I think there are certa
 - [Change date input triangle to a calendar icon](https://stackoverflow.com/questions/29436074/change-date-input-triangle-to-a-calendar-icon) - This helped me easily change the icon on a date input element. I really liked this pattern and will use it going forward.
 - [Using Placeholder On A Date Input In Angular](https://upmostly.com/angular/using-placeholder-on-a-date-input-in-angular) - This provided inspiration for the syntax I used to toggle the date input type so that it allowed for custom placeholder use. I really liked this pattern and will use it going forward.
 - [TypeScript: React useRef Hook](https://www.robinwieruch.de/typescript-react-useref/) - This helped me understand how to manipulate the useRef hook in TypeScript while trying to set the placeholder for the date input. I really liked this pattern and will use it going forward.
+- [How to detect a click outside a React component](https://blog.logrocket.com/detect-click-outside-react-component-how-to/) - This helped me understand how to detect click events outside a react component using the OutsideClickHandler library. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
