@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.cdnfonts.com/css/sf-compact-text");
 *,
 *::before,
 *::after {
@@ -761,7 +762,67 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
   border-radius: 4px;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
   padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.user-details .user-info-dashboard .profile-info-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+}
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details h3 {
+  color: #213F7D;
+  font-size: 1.375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details h4 {
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(2) {
+  border-top: 1px solid hsla(224deg, 20%, 41%, 0.2);
+  border-bottom: 1px solid hsla(224deg, 20%, 41%, 0.2);
+}
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(1) p {
+  font-size: 0.875rem;
+}
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(3) p {
+  color: #213F7D;
+  font-size: 0.75rem;
+}
+.user-details .user-info-dashboard .user-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.user-details .user-info-dashboard .user-nav button {
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  border: 1px transparent;
+}
+.user-details .user-info-dashboard .user-nav button:first-of-type {
+  border-bottom: 2px solid #39CDCC;
+  color: #39CDCC;
+}
+.user-details .user-info-datatable {
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -801,6 +862,31 @@
   .user-details .header-wrapper {
     align-items: center;
     justify-content: space-between;
+  }
+  .user-details .user-info-dashboard {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+  .user-details .user-info-dashboard .profile-info-wrapper {
+    flex-direction: row;
+  }
+  .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper {
+    flex-direction: row;
+  }
+  .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details {
+    padding: 1rem 2rem;
+    align-items: flex-start;
+  }
+  .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(1) {
+    padding-left: 0;
+  }
+  .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(2) {
+    border-top: transparent;
+    border-bottom: transparent;
+    border-left: 1px solid hsla(224deg, 20%, 41%, 0.2);
+    border-right: 1px solid hsla(224deg, 20%, 41%, 0.2);
+  }
+  .user-details .user-info-dashboard .user-nav button {
+    margin: 0;
   }
 }
 @media screen and (min-width: 1024px) {

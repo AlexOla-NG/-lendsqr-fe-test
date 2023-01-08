@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import UserDetailsDashboard from "../components/dashboard/UserDetailsDashboard";
 import { ReactComponent as BackButton } from "../assets/images/back-button.svg";
+import UserDetailsDataTable from "../components/datatable/UserDetailsDataTable";
 
 const UserDetails = () => {
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ const UserDetails = () => {
 
       <section className="user-info user-details-child">
         <UserDetailsDashboard />
+        <UserDetailsDataTable />
       </section>
     </main>
   );

@@ -53,6 +53,42 @@
       align-items: center;
       justify-content: space-between;
     }
+
+    .user-info-dashboard {
+      padding: 1.5rem 1.5rem 0 1.5rem;
+
+      .profile-info-wrapper {
+        flex-direction: row;
+        // align-items: normal;
+
+        .profile-details-wrapper {
+          flex-direction: row;
+          // gap: 1.5rem;
+
+          .profile-details {
+            padding: 1rem 2rem;
+            align-items: flex-start;
+          }
+
+          .profile-details:nth-child(1) {
+            padding-left: 0;
+          }
+
+          .profile-details:nth-child(2) {
+            border-top: transparent;
+            border-bottom: transparent;
+            border-left: 1px solid hsla(224, 20%, 41%, 0.2);
+            border-right: 1px solid hsla(224, 20%, 41%, 0.2);
+          }
+        }
+      }
+
+      .user-nav {
+        button {
+          margin: 0
+        }
+      }
+    }
   }
 
   // .table {
@@ -223,6 +259,16 @@
 
         &:nth-child(1) {
           white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .user-details {
+    .user-info-dashboard {
+      .profile-info-wrapper {
+        .profile-details-wrapper {
+          // gap: 1.5rem;
         }
       }
     }
