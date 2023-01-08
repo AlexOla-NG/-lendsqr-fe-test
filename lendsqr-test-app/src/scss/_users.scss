@@ -1,4 +1,11 @@
 .users {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  .max-width-82rem {
+    // max-width: 82rem;
+    grid-column: span 12;
+  }
 
   h1 {
     color: $primary-color;
@@ -7,10 +14,15 @@
     padding-bottom: 2rem;
   }
 
+
+
   .summarycard-wrapper {
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 1.5rem;
 
     .summarycard {
@@ -20,7 +32,8 @@
       border: 1px solid rgba(33, 63, 125, 0.06);
       border-radius: 4px;
       box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
-      max-width: 15rem;
+      width: 15rem;
+      // max-width: 15rem;
       padding: 1.5rem 2rem 2rem;
 
       .title {
@@ -36,13 +49,18 @@
     }
   }
 
+  .loading {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+
   section {
     position: relative;
 
     .data-table {
       margin-top: 3rem;
       overflow-x: scroll;
-
 
       .table-wrapper {
 
@@ -52,94 +70,6 @@
         border-radius: 4px;
         min-width: 64.813rem;
         padding: 1rem;
-
-
-        table {
-          // background-color: $white-color;
-          border-collapse: collapse;
-          font-size: size(fs-body1);
-          // overflow-x: scroll;
-          table-layout: fixed;
-          width: 100%;
-
-          thead {
-            tr {
-              th {
-                font-weight: weight(bold);
-                text-transform: uppercase;
-
-                .table-head {
-                  display: flex;
-                  font-size: size(fs-body2);
-                  gap: 1rem;
-
-                }
-              }
-            }
-          }
-
-          tbody {
-            tr {
-              border-bottom: 1px solid rgba(33, 63, 125, 0.1);
-            }
-
-            tr:last-of-type {
-              border-bottom: none;
-            }
-          }
-
-          th,
-          td {
-            padding: 1rem;
-            white-space: nowrap;
-          }
-
-          th:first-of-type,
-          td:first-of-type {
-            padding-left: 0;
-          }
-
-          // td:nth-of-type(6),
-          th:last-of-type,
-          td:last-of-type {
-            padding-right: 0;
-          }
-
-          // td:nth-of-type(6),
-          td:last-of-type {
-            cursor: pointer;
-            padding-left: 0.5rem;
-
-            .more-options-wrapper {
-              position: relative;
-
-              .more-options {
-                background: #FFFFFF;
-                border: 1px solid rgba(84, 95, 125, 0.04);
-                box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
-                border-radius: 4px;
-                @include flex-column;
-                gap: 1.5rem;
-                padding: 1.2rem 1.5rem;
-                position: absolute;
-                top: -60%;
-                left: -250%;
-                width: 11.25rem;
-                z-index: 10;
-
-                .menu-items-wrapper {
-                  color: $text-color;
-                  display: flex;
-                  align-items: center;
-                  gap: 0.5rem;
-                  font-size: size(fs-body1);
-                  text-transform: capitalize;
-
-                }
-              }
-            }
-          }
-        }
 
         .filter-form {
           background-color: $white-color;

@@ -14,6 +14,7 @@ const Sidebar = () => {
     <div className="sidebar screensaver">
       <nav className="sidebar-nav">
         <div className="menu-list">
+          {/* STUB: nav class only appears on small screens */}
           <div className="nav">
             <Searchbar />
 
@@ -28,7 +29,7 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <div className="organization">
+          <div className="organization grid-span-12">
             <MenuItem
               startAdornment={<BriefcaseLogo />}
               title="Switch Organization"
@@ -36,11 +37,11 @@ const Sidebar = () => {
             />
           </div>
 
-          <div className="dashboard">
+          <div className="dashboard grid-span-12">
             <MenuItem startAdornment={<Home />} title="Dashboard" />
           </div>
 
-          <div className="menu-list-section">
+          <div className="menu-list-section grid-span-12">
             <h3>customers</h3>
             {customers.map((item, index) => {
               const { startAdornment, title } = item;
@@ -54,7 +55,7 @@ const Sidebar = () => {
             })}
           </div>
 
-          <div className="menu-list-section">
+          <div className="menu-list-section grid-span-12">
             <h3>businesses</h3>
             {businesses.map((item, index) => {
               const { startAdornment, title } = item;
@@ -68,7 +69,7 @@ const Sidebar = () => {
             })}
           </div>
 
-          <div className="menu-list-section">
+          <div className="menu-list-section grid-span-12">
             <h3>settings</h3>
             {settings.map((item, index) => {
               const { startAdornment, title } = item;

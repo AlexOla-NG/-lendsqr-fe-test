@@ -12,10 +12,50 @@
 
   .table-body {
     display: grid;
-    grid-template-columns: repeat(10, 150px);
+    grid-template-columns: repeat(10, minmax(250px, 400px));
     // grid-template-columns: 150px 150px 150px 150px 150px 150px;
     overflow-x: scroll;
     width: calc(100vw - 100px);
+
+    .table-row {
+      .item-cell {
+        border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+
+      }
+
+      .item-cell:last-of-type {
+        border-bottom: none;
+      }
+
+      .more-options-wrapper {
+        position: relative;
+
+        .more-options {
+          background: #FFFFFF;
+          border: 1px solid rgba(84, 95, 125, 0.04);
+          box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
+          border-radius: 4px;
+          @include flex-column;
+          gap: 1.5rem;
+          padding: 1.2rem 1.5rem;
+          position: absolute;
+          top: -280%;
+          width: 11.25rem;
+          z-index: 10;
+
+          .menu-items-wrapper {
+            color: $text-color;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: size(fs-body1);
+            text-transform: capitalize;
+
+          }
+        }
+      }
+    }
+
   }
 
   .table-row {
@@ -30,9 +70,11 @@
 
       .table-head {
         display: flex;
-        justify-content: space-between;
-        // gap: 1rem;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        gap: 1rem;
         font-size: size(fs-body2);
+        white-space: nowrap;
 
       }
 

@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { ITableRow } from "../components/datatable/interface";
+import Loading from "../components/shared/Loading";
+import DataTable from "../components/datatable/DataTable";
 import SummaryCard from "../components/summarycard/SummaryCard";
 import { summarycardlist } from "../components/summarycard/SummaryCardList";
-import DataTable from "../components/datatable/DataTable";
-import { ITableRow } from "../components/datatable/interface";
-
-// TODO: stopped here
-// fix userData.map is not a function error
 
 const Users = () => {
   const [userData, setUserData] = useState<ITableRow[]>([]);
   const [isLoading, setIsLoading] = useState<Boolean>(true);
 
+  // STUB: load users data from api
   useEffect(() => {
     const getUserData = async () => {
       const request = await fetch(
@@ -26,15 +25,19 @@ const Users = () => {
 
   return (
     <main className="users">
-      <h1>Users</h1>
+      <h1 className="max-width-82rem">Users</h1>
 
-      <section className="summarycard-wrapper">
+      <section className="summarycard-wrapper max-width-82rem">
         {summarycardlist.map((item, index) => {
           return <SummaryCard key={index} {...item} />;
         })}
       </section>
 
-      {isLoading && <div>Loading</div>}
+      {isLoading && (
+        <div className="loading">
+          <Loading />
+        </div>
+      )}
       {userData.length > 0 && <DataTable userData={userData} />}
     </main>
   );

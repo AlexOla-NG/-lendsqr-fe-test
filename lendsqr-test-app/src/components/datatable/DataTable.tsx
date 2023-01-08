@@ -41,7 +41,7 @@ const DataTable = ({ userData }: IUserData) => {
     setIsFilter(false);
   };
   return (
-    <section>
+    <section className="max-width-82rem">
       <div className="data-table">
         <div className="table-wrapper">
           {isFilter && (

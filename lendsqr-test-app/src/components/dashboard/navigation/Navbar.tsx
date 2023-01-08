@@ -6,6 +6,9 @@ import { ReactComponent as Notification } from "../../../assets/images/notificat
 import { ReactComponent as Dropdown } from "../../../assets/images/dropdownIcon.svg";
 import ProfilePicture from "../../../assets/images/profilePicture.png";
 
+// TODO: stopped here
+// fix logo disappering on large screen
+
 const Navbar = () => {
   const handleClick = () => {
     document.body.classList.toggle("nav-open");

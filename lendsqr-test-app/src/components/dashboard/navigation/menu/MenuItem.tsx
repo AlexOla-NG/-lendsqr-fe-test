@@ -6,14 +6,21 @@ const MenuItem = ({ startAdornment, title, endAdornment }: IMenuItem) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`${title}`);
+    if (title === "users") {
+      navigate(`${title}`);
+    }
   };
 
   return (
-    <button className="btn menu-item" onClick={handleClick}>
-      {startAdornment}
-      <p>{title}</p>
-      {endAdornment}
+    <button
+      className={`${title === "users" ? "users" : ""} btn menu-item`}
+      onClick={handleClick}
+    >
+      <div>
+        {startAdornment}
+        <p>{title}</p>
+        {endAdornment}
+      </div>
     </button>
   );
 };
