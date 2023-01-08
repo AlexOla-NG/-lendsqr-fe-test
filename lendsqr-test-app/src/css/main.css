@@ -452,7 +452,7 @@
 .users h1 {
   color: #213F7D;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-bottom: 2rem;
 }
 .users .summarycard-wrapper {
@@ -712,6 +712,58 @@
   color: #E4033B;
 }
 
+.user-details-child {
+  grid-column: span 12;
+  margin-bottom: 2rem;
+}
+.user-details .btn {
+  background-color: inherit;
+  color: #545F7D;
+}
+.user-details .back-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.user-details .header-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.user-details .header-wrapper h1 {
+  color: #213F7D;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.user-details .header-wrapper .action-btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.user-details .header-wrapper .action-btn-wrapper .btn {
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+}
+.user-details .header-wrapper .action-btn-wrapper .btn:first-of-type {
+  border: 1px solid #E4033B;
+  color: #E4033B;
+}
+.user-details .header-wrapper .action-btn-wrapper .btn:last-of-type {
+  border: 1px solid #39CDCC;
+  color: #39CDCC;
+}
+.user-details .user-info-dashboard {
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  border-radius: 4px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
   .login {
     display: grid;
@@ -744,6 +796,10 @@
     height: 88.438rem;
   }
   .users section .data-table .paginate-wrapper {
+    justify-content: space-between;
+  }
+  .user-details .header-wrapper {
+    align-items: center;
     justify-content: space-between;
   }
 }

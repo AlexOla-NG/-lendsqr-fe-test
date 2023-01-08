@@ -34,7 +34,7 @@ const Users = () => {
       </section>
 
       {isLoading && (
-        <div className="loading">
+        <div className="loading max-width-82rem">
           <Loading />
         </div>
       )}
