@@ -1,4 +1,4 @@
 # Redirects from what the browser requests to what we serve
-/                     /
-/users                /users
-/users/:id              /users/:id
+/           /home
+/users                /home/users
+/users/:id              /home/users/:id
