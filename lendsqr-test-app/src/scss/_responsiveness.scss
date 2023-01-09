@@ -2,7 +2,7 @@
   .login {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
+    padding: 0 2rem;
     gap: 1rem;
     height: 100vh;
 
@@ -113,7 +113,7 @@
 
     .output {
       margin-left: 17.688rem;
-      padding: 5rem;
+      padding: 5rem 3rem;
     }
   }
 
@@ -123,11 +123,17 @@
 
 
   .login {
-    padding: 2rem 2.5rem;
+    padding: 0;
+
+    &-hero {
+      padding: 2.5rem;
+    }
 
     &-form {
+      padding: 2.5rem;
+
       .form-wrapper {
-        grid-column: 3/-4;
+        grid-column: 2/-3;
       }
     }
   }
@@ -195,9 +201,8 @@
       }
 
       .table-row {
-        grid-template-columns: 250px 170px 250px 180px 180px 120px max-content;
+        grid-template-columns: 120px 120px 220px 130px 120px 100px 60px;
         grid-template-rows: auto;
-        grid-gap: 1rem;
 
         &-title {
           .table-head {
@@ -209,12 +214,6 @@
         }
       }
 
-      .item-cell {
-
-        &:nth-child(1) {
-          white-space: nowrap;
-        }
-      }
     }
   }
 
@@ -251,8 +250,14 @@
 @include media-xxl {
   .login {
     &-hero {
+      padding: 5rem;
+
       .logo {
         top: 25%;
+      }
+
+      .hero {
+        align-self: center;
       }
     }
   }

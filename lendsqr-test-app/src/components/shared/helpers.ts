@@ -28,10 +28,18 @@ const strToDate = (date: string) => {
   });
 };
 
+const formatStr = (text: string) => {
+  let textArray = text.split("-");
+  let joinedText = textArray.join(" ");
+
+  return joinedText;
+};
+
 export {
   handlePreventDefault,
   handleSidebarToggle,
   handleSidebarClose,
   getStatus,
   strToDate,
+  formatStr,
 };

@@ -4,9 +4,6 @@ import LoginForm from "../components/form/LoginForm";
 import { ReactComponent as Logo } from "../assets/images/logo.svg";
 import hero from "../assets/images/hero.svg";
 
-// TODO: stopped here
-// we need form validation; login btn goes straight to next page
-
 const login = ({ userAuth }: IUserAuth) => {
   return (
     <section className="login">

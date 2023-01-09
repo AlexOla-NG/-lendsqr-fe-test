@@ -4,7 +4,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { ITableRow } from "./interface";
 import StatusPill from "./StatusPill";
 import OptionsMenu from "./OptionsMenu";
-import { getStatus, strToDate } from "../shared/helpers";
+import { formatStr, getStatus, strToDate } from "../shared/helpers";
 import { ReactComponent as MoreVertIcon } from "../../assets/images/ic-more-vert.svg";
 
 const TableRow = ({
@@ -13,7 +13,7 @@ const TableRow = ({
   createdAt,
   email,
   phoneNumber,
-  userName,
+  profile,
 }: ITableRow) => {
   const [isMenu, setIsMenu] = useState<Boolean>(false);
   const [status, setStatus] = useState<string>(getStatus());
@@ -48,8 +48,10 @@ const TableRow = ({
 
   return (
     <div className="table-row">
-      <div className="item-cell">{orgName}</div>
-      <div className="item-cell">{userName}</div>
+      <div className="item-cell">{formatStr(orgName)}</div>
+      <div className="item-cell">
+        {profile?.firstName} {profile?.lastName}
+      </div>
       <div className="item-cell">{email.toLowerCase()}</div>
       <div className="item-cell">{phoneNumber}</div>
       <div className="item-cell">{strToDate(createdAt)}</div>

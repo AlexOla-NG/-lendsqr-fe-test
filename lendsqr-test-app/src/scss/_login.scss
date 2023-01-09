@@ -5,7 +5,7 @@
     @include flex-column;
     gap: 5rem;
     height: 100vh;
-    padding: 2rem 0;
+    padding: 2rem 1.5rem;
     position: relative;
 
     .logo {
@@ -23,6 +23,7 @@
   &-form {
     box-shadow: 0px 15px 90px rgb(0 0 0 / 3%);
     height: 100vh;
+    padding: 2rem 1.5rem;
 
     .form-wrapper {
       @include flex-column;

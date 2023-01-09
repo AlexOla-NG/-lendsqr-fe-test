@@ -131,7 +131,7 @@
   flex-direction: column;
   gap: 5rem;
   height: 100vh;
-  padding: 2rem 0;
+  padding: 2rem 1.5rem;
   position: relative;
 }
 .login-hero .logo svg {
@@ -144,6 +144,7 @@
 .login-form {
   box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
   height: 100vh;
+  padding: 2rem 1.5rem;
 }
 .login-form .form-wrapper {
   display: flex;
@@ -442,13 +443,6 @@
   transform: translateX(0);
 }
 
-.users {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-.users .max-width-82rem {
-  grid-column: span 12;
-}
 .users h1 {
   color: #213F7D;
   font-size: 1.5rem;
@@ -498,7 +492,7 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  min-width: 64.813rem;
+  max-width: 64.813rem;
   padding: 1rem;
 }
 .users section .data-table .table-wrapper .filter-form {
@@ -880,7 +874,7 @@
   .login {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
+    padding: 0 2rem;
     gap: 1rem;
     height: 100vh;
   }
@@ -954,16 +948,22 @@
   }
   .home .output {
     margin-left: 17.688rem;
-    padding: 5rem;
+    padding: 5rem 3rem;
   }
   .screensaver {
     transform: translateX(0);
   }
   .login {
-    padding: 2rem 2.5rem;
+    padding: 0;
+  }
+  .login-hero {
+    padding: 2.5rem;
+  }
+  .login-form {
+    padding: 2.5rem;
   }
   .login-form .form-wrapper {
-    grid-column: 3/-4;
+    grid-column: 2/-3;
   }
   .users h1 {
     padding-bottom: 4rem;
@@ -1005,18 +1005,13 @@
     border-bottom: none;
   }
   .users .table .table-row {
-    grid-template-columns: 250px 170px 250px 180px 180px 120px -webkit-max-content;
-    grid-template-columns: 250px 170px 250px 180px 180px 120px max-content;
+    grid-template-columns: 120px 120px 220px 130px 120px 100px 60px;
     grid-template-rows: auto;
-    grid-gap: 1rem;
   }
   .users .table .table-row-title .table-head {
     flex-direction: row;
     justify-content: normal;
     gap: 1rem;
-  }
-  .users .table .item-cell:nth-child(1) {
-    white-space: nowrap;
   }
   .user-details .user-info-dashboard {
     padding: 2rem 3rem 0 3rem;
@@ -1032,8 +1027,14 @@
   }
 }
 @media screen and (min-width: 2560px) {
+  .login-hero {
+    padding: 5rem;
+  }
   .login-hero .logo {
     top: 25%;
+  }
+  .login-hero .hero {
+    align-self: center;
   }
   .users .max-width-82rem {
     max-width: 82rem;
