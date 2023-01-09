@@ -15,12 +15,6 @@ const TableHead = ({
       {title}
       <button onClick={handleClick}>{endAdornment}</button>
     </div>
-    // <th>
-    //   <div className="table-head">
-    //     {title}
-    //     <button onClick={handleClick}>{endAdornment}</button>
-    //   </div>
-    // </th>
   );
 };
 

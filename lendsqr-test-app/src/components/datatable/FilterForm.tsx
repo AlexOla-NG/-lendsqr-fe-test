@@ -3,12 +3,10 @@ import { handlePreventDefault } from "../shared/helpers";
 import { ReactComponent as Chevron } from "../../assets/images/chevron.svg";
 import { ReactComponent as Calendar } from "../../assets/images/calendar.svg";
 
-// TODO: stopped here
-// style filterform
-
 const FilterForm = () => {
   const dateRef = useRef<HTMLInputElement | null>(null);
 
+  // STUB: create functions to enable placeholder for date-input
   const handleFocus = () => {
     if (dateRef.current) {
       dateRef.current.type = "date";

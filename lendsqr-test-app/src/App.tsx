@@ -7,6 +7,7 @@ import UserDetails from "./views/UserDetails";
 import Error from "./views/Error";
 
 function App() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [auth, setAuth] = useState<string>(
     JSON.parse(localStorage.getItem("auth_token") as string) || false
   );

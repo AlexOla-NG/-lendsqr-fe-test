@@ -63,18 +63,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1.5rem;
-    // position: relative;
 
     .hamburger-wrapper {
-      // display: none;
 
       .nav__toggle {
-        // position: absolute;
-        // left: 0;
         width: 3em;
         height: 3em;
-        // transform: translateX(-150%);
-        // background: $accent-color;
         border: 0;
         border-radius: 1.5em;
         display: flex;
@@ -96,7 +90,6 @@
         width: 1.5em;
         height: 3px;
         background: $primary-color;
-        // background: $white-color;
         transition: transform 350ms ease-in-out, opacity 200ms linear;
       }
 

@@ -69,30 +69,6 @@ const TableRow = ({
         )}
       </div>
     </div>
-    // <tr>
-    //   <td>{orgName}</td>
-    //   <td>{userName}</td>
-    //   <td>{email.toLowerCase()}</td>
-    //   <td>{phoneNumber}</td>
-    //   <td>{strToDate(createdAt)}</td>
-    //   <td>
-    //     <StatusPill status={status} />
-    //   </td>
-    //   <td>
-    //     <div className="more-options-wrapper">
-    //       <MoreVertIcon onClick={handleOpen} />
-    //       {isMenu && (
-    //         <OutsideClickHandler onOutsideClick={handleClose}>
-    //           <OptionsMenu
-    //             handleNavigate={handleNavigate}
-    //             activateUser={handleActivate}
-    //             blacklistUser={handleBlacklist}
-    //           />
-    //         </OutsideClickHandler>
-    //       )}
-    //     </div>
-    //   </td>
-    // </tr>
   );
 };
 

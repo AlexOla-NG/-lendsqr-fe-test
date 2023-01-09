@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
-@import url("https://fonts.cdnfonts.com/css/sf-compact-text");
 *,
 *::before,
 *::after {
@@ -370,7 +369,7 @@
   flex-direction: column;
 }
 .sidebar-nav .menu-list-section .menu-item {
-  border: 3px solid transparent;
+  border: 5px solid transparent;
   padding: 0.75rem 0;
 }
 .sidebar-nav .menu-list-section .menu-item:hover {
@@ -772,6 +771,9 @@
   align-items: center;
   margin-bottom: 2.5rem;
 }
+.user-details .user-info-dashboard .profile-info-wrapper .avatar-wrapper img {
+  border-radius: 50%;
+}
 .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper {
   display: flex;
   flex-direction: column;
@@ -800,6 +802,9 @@
 .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(1) p {
   font-size: 0.875rem;
 }
+.user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(3) h3::first-letter {
+  text-decoration: line-through;
+}
 .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(3) p {
   color: #213F7D;
   font-size: 0.75rem;
@@ -815,7 +820,7 @@
   border: 1px transparent;
 }
 .user-details .user-info-dashboard .user-nav button:first-of-type {
-  border-bottom: 2px solid #39CDCC;
+  border-bottom: 3px solid #39CDCC;
   color: #39CDCC;
 }
 .user-details .user-info-datatable {
@@ -823,6 +828,52 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
+  padding: 1.5rem;
+}
+.user-details .user-info-datatable .datatable .table-row {
+  border-bottom: 1px solid hsla(220deg, 58%, 31%, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+.user-details .user-info-datatable .datatable .table-row h4 {
+  color: #213F7D;
+  font-weight: 600;
+}
+.user-details .user-info-datatable .datatable .table-row .row-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 260px));
+  gap: 1.5rem;
+}
+.user-details .user-info-datatable .datatable .table-row .row-content .cell-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.user-details .user-info-datatable .datatable .table-row .row-content .cell-data h5 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.user-details .user-info-datatable .datatable .table-row .row-content .cell-data p {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.user-details .user-info-datatable .datatable .table-row .row-content .cell-data .email {
+  text-transform: lowercase;
+}
+.user-details .user-info-datatable .datatable .table-row .row-content .naira-sign p span {
+  display: inline-block;
+}
+.user-details .user-info-datatable .datatable .table-row .row-content .naira-sign p span::first-letter {
+  text-decoration: line-through;
+}
+.user-details .user-info-datatable .datatable .table-row:last-of-type {
+  border-bottom: none;
+}
+.user-details .user-info-datatable .datatable .table-row:last-of-type h4 {
+  visibility: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -853,9 +904,6 @@
   .login-form .form-wrapper {
     grid-column: 2/-2;
   }
-  .home .output {
-    height: 88.438rem;
-  }
   .users section .data-table .paginate-wrapper {
     justify-content: space-between;
   }
@@ -874,7 +922,6 @@
   }
   .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details {
     padding: 1rem 2rem;
-    align-items: flex-start;
   }
   .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details:nth-child(1) {
     padding-left: 0;
@@ -891,7 +938,10 @@
 }
 @media screen and (min-width: 1024px) {
   .home .navbar {
-    padding: 1.5rem;
+    padding: 1.5rem 4.5rem 1.5rem 1.5rem;
+  }
+  .home .navbar nav .logo-wrapper {
+    gap: 12rem;
   }
   .home .navbar-mobile,
 .home .navbar .hamburger-wrapper {
@@ -926,6 +976,7 @@
   }
   .users section .data-table .table-wrapper .filter-form {
     max-width: 16.875rem;
+    top: 6rem;
   }
   .users section .data-table .table-wrapper .filter-form form .btn-wrapper .btn {
     padding: 0.6rem 1.8rem;
@@ -966,6 +1017,18 @@
   }
   .users .table .item-cell:nth-child(1) {
     white-space: nowrap;
+  }
+  .user-details .user-info-dashboard {
+    padding: 2rem 3rem 0 3rem;
+  }
+  .user-details .user-info-dashboard .profile-info-wrapper .profile-details-wrapper .profile-details {
+    align-items: flex-start;
+  }
+  .user-details .user-info-datatable {
+    padding: 1.5rem 3rem;
+  }
+  .user-details .user-info-datatable .datatable .table-row .row-content {
+    gap: 2rem;
   }
 }
 @media screen and (min-width: 2560px) {

@@ -1,11 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/sf-compact-text');
-// use font for unselected nav headers: documents, bank details, loans, savings, app & system
-
 .user-details {
-
-  // display: grid;
-  // grid-template-columns: repeat(12, 1fr);
-  // gap: 2rem;
 
   &-child {
     grid-column: span 12;
@@ -67,7 +60,6 @@
       border-radius: 4px;
       box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
       margin-bottom: 1.5rem;
-      // padding: 1rem 1rem 0 1rem;
       padding: 1.5rem 1.5rem 0 1.5rem;
 
       .profile-info-wrapper {
@@ -77,12 +69,16 @@
         align-items: center;
         margin-bottom: 2.5rem;
 
+        .avatar-wrapper {
+          img {
+            border-radius: 50%;
+          }
+        }
+
         .profile-details-wrapper {
           display: flex;
           flex-direction: column;
-          // align-items: center;
           text-align: center;
-          // gap: 1.5rem;
 
           .profile-details {
             display: flex;
@@ -115,6 +111,10 @@
           }
 
           .profile-details:nth-child(3) {
+            h3::first-letter {
+              text-decoration: line-through;
+            }
+
             p {
               color: $primary-color;
               font-size: size(fs-body2);
@@ -127,7 +127,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        // gap: 1rem;
 
         button {
           margin: 0 auto;
@@ -136,7 +135,7 @@
         }
 
         button:first-of-type {
-          border-bottom: 2px solid $accent-color;
+          border-bottom: 3px solid $accent-color;
           color: $accent-color;
         }
       }
@@ -147,6 +146,69 @@
       border: 1px solid rgba(33, 63, 125, 0.06);
       box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
       border-radius: 4px;
+      padding: 1.5rem;
+
+      .datatable {
+        .table-row {
+          border-bottom: 1px solid hsla(220, 58%, 31%, 0.1);
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          padding: 1.5rem 0;
+
+          h4 {
+            color: $primary-color;
+            font-weight: weight(bold);
+          }
+
+          .row-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 260px));
+            gap: 1.5rem;
+
+            .cell-data {
+              display: flex;
+              flex-direction: column;
+              gap: 0.75rem;
+
+              h5 {
+                font-size: size(fs-body2);
+                font-weight: weight(regular);
+                text-transform: uppercase;
+              }
+
+              p {
+                font-weight: weight(bold);
+                text-transform: capitalize;
+              }
+
+              .email {
+                text-transform: lowercase;
+              }
+            }
+
+            .naira-sign {
+              p {
+                span {
+                  display: inline-block;
+                }
+
+                span::first-letter {
+                  text-decoration: line-through;
+                }
+              }
+            }
+          }
+        }
+
+        .table-row:last-of-type {
+          border-bottom: none;
+
+          h4 {
+            visibility: hidden;
+          }
+        }
+      }
     }
 
   }

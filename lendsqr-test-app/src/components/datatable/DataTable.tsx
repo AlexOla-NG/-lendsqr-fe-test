@@ -10,9 +10,6 @@ import { ReactComponent as PrevButton } from "../../assets/images/previous-btn.s
 import { ReactComponent as NextButton } from "../../assets/images/next-btn.svg";
 import { ITableRow, IUserData } from "./interface";
 
-// TODO: stopped here
-// finish styling table
-
 const DataTable = ({ userData }: IUserData) => {
   const [isFilter, setIsFilter] = useState<Boolean>(false);
   const [currentItems, setCurrentItems] = useState<ITableRow[] | null>(null);
@@ -66,32 +63,6 @@ const DataTable = ({ userData }: IUserData) => {
               })}
             </div>
           </div>
-
-          {/* <table>
-            <colgroup>
-              <col width="15%" />
-              <col width="13%" />
-              <col width="22%" />
-              <col width="18%" />
-              <col width="18%" />
-              <col width="10%" />
-              <col width="4%" />
-            </colgroup>
-            <thead>
-              <tr>
-                {tableHeaders.map((item, index) => {
-                  return (
-                    <TableHead key={index} {...item} handleOpen={handleOpen} />
-                  );
-                })}
-              </tr>
-            </thead>
-            <tbody>
-              {currentItems?.map((user) => {
-                return <TableRow key={user.id} {...user} />;
-              })}
-            </tbody>
-          </table> */}
         </div>
 
         <div className="paginate-wrapper">

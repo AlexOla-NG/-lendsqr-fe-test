@@ -32,11 +32,6 @@
     }
   }
 
-  .home {
-    .output {
-      height: 88.438rem;
-    }
-  }
 
   .users {
     section {
@@ -59,15 +54,12 @@
 
       .profile-info-wrapper {
         flex-direction: row;
-        // align-items: normal;
 
         .profile-details-wrapper {
           flex-direction: row;
-          // gap: 1.5rem;
 
           .profile-details {
             padding: 1rem 2rem;
-            align-items: flex-start;
           }
 
           .profile-details:nth-child(1) {
@@ -91,34 +83,6 @@
     }
   }
 
-  // .table {
-  //   grid-template-columns: auto;
-  //   grid-template-rows: 40px auto;
-
-
-  //   .table-body {
-  //     grid-template-columns: auto;
-  //     overflow: visible;
-  //     width: 100%;
-  //   }
-
-  //   .table-row {
-  //     grid-template-columns: 20px 50px 100px auto 100px 50px 50px 50px 50px 50px 120px;
-  //     grid-template-rows: auto;
-  //   }
-
-  //   .item-cell {
-
-  //     &:nth-child(1) {
-  //       justify-content: center;
-  //     }
-
-  //     &:nth-child(5),
-  //     &:nth-child(n+7) {
-  //       justify-content: flex-end;
-  //     }
-  //   }
-  // }
 }
 
 @include media-lg {
@@ -126,7 +90,13 @@
   .home {
 
     .navbar {
-      padding: 1.5rem;
+      padding: 1.5rem 4.5rem 1.5rem 1.5rem;
+
+      nav {
+        .logo-wrapper {
+          gap: 12rem;
+        }
+      }
 
       &-mobile,
       .hamburger-wrapper {
@@ -137,10 +107,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-      }
-
-      .sidebar {
-        // padding: 0 1.5rem;
       }
 
     }
@@ -172,13 +138,6 @@
       padding-bottom: 4rem;
     }
 
-    .summarycard-wrapper {
-      .summarycard {
-        // grid-column: span 3;
-        // max-width: 15rem;
-      }
-    }
-
     section {
       .data-table {
 
@@ -189,6 +148,7 @@
 
           .filter-form {
             max-width: 16.875rem;
+            top: 6rem;
 
             form {
               .btn-wrapper {
@@ -199,10 +159,6 @@
             }
           }
         }
-
-        // .paginate-wrapper {
-        //   justify-content: space-between;
-        // }
 
       }
     }
@@ -239,8 +195,6 @@
       }
 
       .table-row {
-
-        // grid-template-columns: 250px 150px 250px 180px 180px 120px max-content;
         grid-template-columns: 250px 170px 250px 180px 180px 120px max-content;
         grid-template-rows: auto;
         grid-gap: 1rem;
@@ -266,12 +220,29 @@
 
   .user-details {
     .user-info-dashboard {
+      padding: 2rem 3rem 0 3rem;
+
       .profile-info-wrapper {
         .profile-details-wrapper {
-          // gap: 1.5rem;
+          .profile-details {
+            align-items: flex-start;
+          }
         }
       }
     }
+
+    .user-info-datatable {
+      padding: 1.5rem 3rem;
+
+      .datatable {
+        .table-row {
+          .row-content {
+            gap: 2rem;
+          }
+        }
+      }
+    }
+
   }
 }
 
