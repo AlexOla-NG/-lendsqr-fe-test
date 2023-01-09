@@ -19,6 +19,7 @@ function App() {
   // STUB: create function to save auth token to localStorage
   const saveToLocalStorage = () => {
     localStorage.setItem("auth_token", JSON.stringify(true));
+setAuth(JSON.parse(localStorage.getItem("auth_token") as string));
   };
   return (
     <>
