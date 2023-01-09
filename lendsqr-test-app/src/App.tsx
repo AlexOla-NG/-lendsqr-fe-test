@@ -6,6 +6,8 @@ import Users from "./views/Users";
 import UserDetails from "./views/UserDetails";
 import Error from "./views/Error";
 
+// STUB: completed app
+
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [auth, setAuth] = useState<string>(
